@@ -1,5 +1,7 @@
-class AdvancementCondition {
+import Condition from "../Condition";
+class AdvancementCondition extends Condition {
     constructor(advancement = "") {
+        super();
         this.type = 'origins:advancement';
         this.advancement = advancement;
     }

@@ -1,31 +1,40 @@
-import { Comparison } from "../../@types/datatypes/datatypes";
-import Condition from "../Condition";
+import { Comparison } from '../../@types/datatypes/datatypes';
+import Condition from '../Condition';
 
-class AttributeCondition extends Condition {
-    public readonly type = 'origins:attribute';
-    public attribute: string;
+class CommandCondition extends Condition {
+    public readonly type = 'origins:command';
+    public command: string;
     public comparison: Comparison;
     public compare_to: number;
 
-    setAttribute(attribute: string) {
-        this.attribute = attribute;
+    constructor(command?: string, comparison?: Comparison, compare_to?: number) {
+        super();
+        this.command = command;
+        this.comparison = comparison;
+        this.compare_to = compare_to;
+    }
+
+    setCommand(command: string) {
+        this.command = command;
     }
 
     setComparison(comparison: Comparison) {
-        this.comparison = comparison;
+        this.comparison = comparison
+        return this;
     }
 
-    setCompareTo(compareTo: number) {
-        this.compare_to = compareTo;
+    setCompareTo(value: number) {
+        this.compare_to = value;
+        return this;
     }
 }
 
-class AttributeConditionFactory {
-    private readonly instance: AttributeCondition;
+class CommandConditionFactory {
+    private readonly instance: CommandCondition;
 
-    constructor(attribute: string) {
-        this.instance = new AttributeCondition();
-        this.instance.attribute = attribute;
+    constructor(command: string) {
+        this.instance = new CommandCondition();
+        this.instance.command = command;
     }
 
     mustBeGreaterThan(value: number) {
@@ -65,8 +74,7 @@ class AttributeConditionFactory {
     }
 }
 
-
-export default AttributeCondition;
-export function attribute(attribute: string) {
-    return new AttributeConditionFactory(attribute);
+export default CommandCondition;
+export function command(command: string) {
+    return new CommandConditionFactory(command);
 }

@@ -1,4 +1,5 @@
 import * as fs from 'fs';
+import { ConditionType } from '../@types/conditiontypes/index';
 
 class Power {
     public fileName: string;
@@ -10,7 +11,7 @@ class Power {
     public hidden: boolean;
     public loading_priority: number;
     public badges: string[];
-    public condition: any;
+    public condition: ConditionType;
 
     constructor(namespace: string, fileName: string, name: string, description: string = "") {
         this.namespace = namespace;
@@ -50,7 +51,7 @@ class Power {
         return this;
     }
 
-    setCondition(value: any) {
+    setCondition(value: ConditionType) {
         this.condition = value;
         return this;
     }

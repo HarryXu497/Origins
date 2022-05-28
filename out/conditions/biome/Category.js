@@ -1,5 +1,7 @@
-class CategoryCondition {
+import Condition from "../Condition";
+class CategoryCondition extends Condition {
     constructor(category) {
+        super();
         this.type = 'origins:category';
         this.category = category;
     }

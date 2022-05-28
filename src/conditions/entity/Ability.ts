@@ -1,6 +1,7 @@
-import { PlayerAbilities } from '../../@types/player/player.s';
+import { PlayerAbilities } from '../../@types/player/player';
+import Condition from '../Condition';
 
-class AbilityCondition {
+class AbilityCondition extends Condition {
     public readonly type = 'origins:ability';
     public ability: PlayerAbilities;
 

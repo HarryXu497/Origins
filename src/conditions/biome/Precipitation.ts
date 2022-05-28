@@ -1,8 +1,11 @@
-class PrecipitationCondition {
+import Condition from "../Condition";
+
+class PrecipitationCondition extends Condition {
     public readonly type = 'origins:precipitation';
     public precipitation: 'none' | 'rain' | 'snow';
 
     constructor(precipitation: 'none' | 'rain' | 'snow') {
+        super();
         this.precipitation = precipitation;
     }
 
@@ -11,7 +14,7 @@ class PrecipitationCondition {
     }
 }
 
-class PrecipitationConditionFactory {
+export class PrecipitationConditionFactory {
     private readonly instance: PrecipitationCondition;
 
     constructor(precipitation: 'none' | 'rain' | 'snow' = 'none') {

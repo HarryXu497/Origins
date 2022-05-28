@@ -1,10 +1,11 @@
-import { PlayerAbilities } from '../../@types/player/player.s';
+import Condition from "../Condition";
 
-class AdvancementCondition {
+class AdvancementCondition extends Condition {
     public readonly type = 'origins:advancement';
     public advancement: string;
 
     constructor(advancement: string = "") {
+        super()
         this.advancement = advancement;
     }
 

@@ -5,11 +5,8 @@
   "burn_duration": 10,
   "interval": 120,
   "condition": {
-    "type": "origins:biome",
-    "condition": {
-      "type": "origins:temperature",
-      "comparison": "<=",
-      "compare_to": 10
-    }
+    "type": "origins:elytra_flight_possible",
+    "check_state": true,
+    "check_abilities": true
   }
 }

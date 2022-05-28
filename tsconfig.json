@@ -4,6 +4,6 @@
         "watch": true,
         "target": "ES6",
         "outDir": "out",
-        "module": "es6"
+        "module": "es6",
     }
 }

@@ -1,5 +1,7 @@
-class AirCondition {
-    constructor(comparison = null, compare_to = null) {
+import Condition from '../Condition';
+class AirCondition extends Condition {
+    constructor(comparison, compare_to) {
+        super();
         this.type = 'origins:air';
         this.comparison = comparison;
         this.compare_to = compare_to;

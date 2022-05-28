@@ -1,15 +1,13 @@
 import Origin from './origins.js';
 import Burn from './powers/regular/Burn';
-import BiomeCondition from './conditions/entity/Biome';
-import { biomeTemperature } from './conditions/biome/Temperature';
+import { elytra } from './conditions/entity/ElytraFlightPossible';
 const origin = new Origin("Sfan");
 const power = new Burn("custom", "boom", "power");
 power
     .setBurnDuration(10)
     .setInterval(120)
     .setDescription("Burns enemies with Sfan power.")
-    .setCondition(new BiomeCondition()
-    .setCondition(biomeTemperature().mustBeLessThanOrEqualTo(10)));
+    .setCondition(elytra().mustBeAbleToFly());
 origin
     .setDescription("The new origin based on Sfan.")
     .setIcon("minecraft:slime_ball")

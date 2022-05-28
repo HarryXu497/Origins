@@ -1,5 +1,7 @@
-class PrecipitationCondition {
+import Condition from "../Condition";
+class PrecipitationCondition extends Condition {
     constructor(precipitation) {
+        super();
         this.type = 'origins:precipitation';
         this.precipitation = precipitation;
     }
@@ -7,7 +9,7 @@ class PrecipitationCondition {
         this.precipitation = precipitation;
     }
 }
-class PrecipitationConditionFactory {
+export class PrecipitationConditionFactory {
     constructor(precipitation = 'none') {
         this.instance = new PrecipitationCondition(precipitation);
     }

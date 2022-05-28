@@ -1,23 +1,28 @@
-import Condition from "../Condition";
-class AttributeCondition extends Condition {
-    constructor() {
-        super(...arguments);
-        this.type = 'origins:attribute';
+import Condition from '../Condition';
+class CommandCondition extends Condition {
+    constructor(command, comparison, compare_to) {
+        super();
+        this.type = 'origins:command';
+        this.command = command;
+        this.comparison = comparison;
+        this.compare_to = compare_to;
     }
-    setAttribute(attribute) {
-        this.attribute = attribute;
+    setCommand(command) {
+        this.command = command;
     }
     setComparison(comparison) {
         this.comparison = comparison;
+        return this;
     }
-    setCompareTo(compareTo) {
-        this.compare_to = compareTo;
+    setCompareTo(value) {
+        this.compare_to = value;
+        return this;
     }
 }
-class AttributeConditionFactory {
-    constructor(attribute) {
-        this.instance = new AttributeCondition();
-        this.instance.attribute = attribute;
+class CommandConditionFactory {
+    constructor(command) {
+        this.instance = new CommandCondition();
+        this.instance.command = command;
     }
     mustBeGreaterThan(value) {
         this.instance.comparison = '>';
@@ -50,7 +55,7 @@ class AttributeConditionFactory {
         return this.instance;
     }
 }
-export default AttributeCondition;
-export function attribute(attribute) {
-    return new AttributeConditionFactory(attribute);
+export default CommandCondition;
+export function command(command) {
+    return new CommandConditionFactory(command);
 }

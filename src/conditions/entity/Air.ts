@@ -1,10 +1,13 @@
 import { Comparison } from '../../@types/datatypes/datatypes';
-class AirCondition {
+import Condition from '../Condition';
+
+class AirCondition extends Condition {
     public readonly type = 'origins:air';
     public comparison: Comparison;
     public compare_to: number;
 
-    constructor(comparison: Comparison = null, compare_to: number = null) {
+    constructor(comparison?: Comparison, compare_to?: number) {
+        super();
         this.comparison = comparison;
         this.compare_to = compare_to;
     }
@@ -21,7 +24,7 @@ class AirCondition {
 }
 
 class AirConditionFactory {
-    private readonly instance;
+    private readonly instance: AirCondition;
 
     constructor() {
         this.instance = new AirCondition();

@@ -1,5 +1,7 @@
-class TemperatureCondition {
-    constructor(comparison = null, compare_to = null) {
+import Condition from '../Condition';
+class TemperatureCondition extends Condition {
+    constructor(comparison, compare_to) {
+        super();
         this.type = 'origins:temperature';
         this.comparison = comparison;
         this.compare_to = compare_to;
@@ -13,7 +15,7 @@ class TemperatureCondition {
         return this;
     }
 }
-class TemperatureConditionFactory {
+export class TemperatureConditionFactory {
     constructor() {
         this.instance = new TemperatureCondition();
     }

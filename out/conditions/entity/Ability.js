@@ -1,5 +1,7 @@
-class AbilityCondition {
+import Condition from '../Condition';
+class AbilityCondition extends Condition {
     constructor() {
+        super(...arguments);
         this.type = 'origins:ability';
     }
     setAbility(ability) {

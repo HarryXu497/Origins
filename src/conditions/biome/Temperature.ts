@@ -1,10 +1,12 @@
 import { Comparison } from '../../@types/datatypes/datatypes';
-class TemperatureCondition {
+import Condition from '../Condition';
+class TemperatureCondition extends Condition {
     public readonly type = 'origins:temperature';
     public comparison: Comparison;
     public compare_to: number;
 
-    constructor(comparison: Comparison = null, compare_to: number = null) {
+    constructor(comparison?: Comparison, compare_to?: number) {
+        super();
         this.comparison = comparison;
         this.compare_to = compare_to;
     }
@@ -20,7 +22,7 @@ class TemperatureCondition {
     }
 }
 
-class TemperatureConditionFactory {
+export class TemperatureConditionFactory {
     private readonly instance: TemperatureCondition;
 
     constructor() {
