@@ -1,13 +1,13 @@
 import Origin from './origins.js';
 import Burn from './powers/regular/Burn';
-import { elytra } from './conditions/entity/ElytraFlightPossible';
+import { entityGroup } from './conditions/entity/EntityGroup';
 const origin = new Origin("Sfan");
 const power = new Burn("custom", "boom", "power");
 power
     .setBurnDuration(10)
     .setInterval(120)
     .setDescription("Burns enemies with Sfan power.")
-    .setCondition(elytra().mustBeAbleToFly());
+    .setCondition(entityGroup().mustBeUndead());
 origin
     .setDescription("The new origin based on Sfan.")
     .setIcon("minecraft:slime_ball")

@@ -12,6 +12,7 @@ import DaytimeCondition from '../../conditions/entity/Daytime';
 import DimensionCondition from '../../conditions/entity/Dimension';
 import EnchantmentCondition from '../../conditions/entity/Enchantment';
 import ElytraFlightPossibleCondition from '../../conditions/entity/ElytraFlightPossible';
+import EntityGroupCondition from '../../conditions/entity/EntityGroup';
 
 export type EntityConditionType = 
     AbilityCondition |
@@ -27,7 +28,8 @@ export type EntityConditionType =
     DaytimeCondition |
     DimensionCondition |
     ElytraFlightPossibleCondition |
-    EnchantmentCondition ;
+    EnchantmentCondition |
+    EntityGroupCondition;
     
     
 
