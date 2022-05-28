@@ -5,7 +5,11 @@
   "burn_duration": 10,
   "interval": 120,
   "condition": {
-    "type": "origins:ability",
-    "ability": "minecraft:mayfly"
+    "type": "origins:biome",
+    "condition": {
+      "type": "origins:temperature",
+      "comparison": "<=",
+      "compare_to": 10
+    }
   }
 }

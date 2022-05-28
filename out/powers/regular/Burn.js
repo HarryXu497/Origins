@@ -1,4 +1,4 @@
-import Power from '../power.js';
+import Power from '../power';
 /*
 * Sets the entity that has the power on fire within the specified interval.
 * Type ID: origins:burn

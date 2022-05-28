@@ -1,7 +1,9 @@
 {
     "compilerOptions": {
+        "esModuleInterop": true,
         "watch": true,
         "target": "ES6",
-        "outDir": "out"
+        "outDir": "out",
+        "module": "es6"
     }
 }

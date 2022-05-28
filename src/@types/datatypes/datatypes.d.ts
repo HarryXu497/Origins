@@ -1,4 +1,4 @@
-import { EntityConditionType } from './actiontypes/entity';
+import { EntityConditionType } from '../actiontypes/entity';
 // Types
 export type ModifierOperation = 'addition' | 'multiply_base' | 'multiply_total';
 export type Comparison = '<' | '<=' | '>' | '>=' | '==' | '!=';

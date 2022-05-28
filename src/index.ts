@@ -1,7 +1,8 @@
-import AbilityCondition from './conditions/entity/Ability.js';
-import Ability from './conditions/entity/Ability.js';
 import Origin from './origins.js';
 import Burn from './powers/regular/Burn';
+import { attribute } from './conditions/entity/Attribute';
+import BiomeCondition from './conditions/entity/Biome';
+import { biomeTemperature } from './conditions/biome/Temperature';
 
 const origin = new Origin("Sfan")
 const power = new Burn("custom", "boom", "power");
@@ -11,8 +12,10 @@ power
     .setInterval(120)
     .setDescription("Burns enemies with Sfan power.")
     .setCondition(
-        new AbilityCondition()
-            .setAbility("minecraft:mayfly")
+        new BiomeCondition()
+            .setCondition(
+                biomeTemperature().mustBeLessThanOrEqualTo(10)
+            )
     )
 
 

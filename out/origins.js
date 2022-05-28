@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import Power from './powers/power.js';
+import Power from './powers/power';
 class Origin {
     constructor(name, description = "") {
         this.name = name;

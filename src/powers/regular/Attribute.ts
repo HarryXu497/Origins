@@ -1,5 +1,5 @@
 import Power from '../power.js';
-import { AttributedAttributeModifier } from '../../@types/datatypes';
+import { AttributedAttributeModifier } from '../../@types/datatypes/datatypes';
 
 /*
 * Applies one or more attribute modifiers.

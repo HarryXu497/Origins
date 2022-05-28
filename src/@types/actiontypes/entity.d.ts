@@ -1,6 +1,6 @@
-import { PlayerAbilities } from '../player/player.s';
-import { Comparison } from '../datatypes';
 import AbilityCondition from '../../conditions/entity/Ability';
 import AdvancementCondition from '../../conditions/entity/Advancement';
+import AirCondition from '../../conditions/entity/Air';
+import AttributeCondition from '../../conditions/entity/Attribute';
 
-export type EntityConditionType = AbilityCondition | AdvancementCondition ;
+export type EntityConditionType = AbilityCondition | AdvancementCondition | AirCondition | AttributeCondition;
