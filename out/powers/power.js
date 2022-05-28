@@ -9,6 +9,7 @@ class Power {
     }
     setType(type) {
         this.type = type;
+        return this;
     }
     setName(name) {
         this.name = name;
@@ -20,6 +21,7 @@ class Power {
     }
     setHidden(hidden) {
         this.hidden = hidden;
+        return this;
     }
     setLoadingPriority(priority) {
         this.loading_priority = priority;
@@ -27,6 +29,11 @@ class Power {
     }
     setBadges(badges) {
         this.badges = badges;
+        return this;
+    }
+    setCondition(value) {
+        this.condition = value;
+        return this;
     }
     writeToFile() {
         const obj = Object.assign({}, this);

@@ -1,8 +1,19 @@
+import AbilityCondition from './conditions/entity/Ability.js';
+import Ability from './conditions/entity/Ability.js';
 import Origin from './origins.js';
-import Power from './powers/power';
+import Burn from './powers/regular/Burn';
 
 const origin = new Origin("Sfan")
-const power = new Power("custom", "boom", "power");
+const power = new Burn("custom", "boom", "power");
+
+power
+    .setBurnDuration(10)
+    .setInterval(120)
+    .setDescription("Burns enemies with Sfan power.")
+    .setCondition(
+        new AbilityCondition()
+            .setAbility("minecraft:mayfly")
+    )
 
 
 origin

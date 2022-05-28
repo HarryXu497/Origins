@@ -1,0 +1,1 @@
+export type PlayerAbilities = 'minecraft:flying' | 'minecraft:instabuild' | 'minecraft:invulnerable' | 'minecraft:mayBuild' | 'minecraft:mayfly';

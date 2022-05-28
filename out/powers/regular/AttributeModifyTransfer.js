@@ -4,6 +4,10 @@ import Power from '../power.js';
 * Type ID: origins:attribute_modify_transfer
 */
 class AttributeModifyTransfer extends Power {
+    constructor() {
+        super(...arguments);
+        this.type = 'origins:attribute_modify_transfer';
+    }
     setClass(value) {
         this.class = value;
         return this;

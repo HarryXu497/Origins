@@ -1,4 +1,5 @@
 import Power from '../power.js';
+import { AttributedAttributeModifier } from '../../@types/datatypes';
 
 /*
 * Applies one or more attribute modifiers.
@@ -6,16 +7,17 @@ import Power from '../power.js';
 */
 
 class Attribute extends Power {
-    public modifier: string;
-    public modifiers: string[];
+    public readonly type = 'origins:attribute';
+    public modifier: AttributedAttributeModifier;
+    public modifiers: AttributedAttributeModifier[];
     public update_health: boolean;
 
-    setModifier(value: string) {
+    setModifier(value: AttributedAttributeModifier) {
         this.modifier = value;
         return this;
     }
 
-    setModifiers(value: string[]) {
+    setModifiers(value: AttributedAttributeModifier[]) {
         this.modifiers = value;
         return this;
     }

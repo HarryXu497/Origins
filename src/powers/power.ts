@@ -22,6 +22,7 @@ class Power {
 
     setType(type: string) {
         this.type = type;
+        return this;
     }
 
     setName(name: string) {
@@ -36,6 +37,7 @@ class Power {
 
     setHidden(hidden: boolean) {
         this.hidden = hidden;
+        return this;
     }
 
     setLoadingPriority(priority: number) {
@@ -45,6 +47,12 @@ class Power {
 
     setBadges(badges: string[]) {
         this.badges = badges;
+        return this;
+    }
+
+    setCondition(value: any) {
+        this.condition = value;
+        return this;
     }
 
     writeToFile() {

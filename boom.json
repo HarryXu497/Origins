@@ -1,0 +1,11 @@
+{
+  "name": "power",
+  "description": "Burns enemies with Sfan power.",
+  "type": "origins:burn",
+  "burn_duration": 10,
+  "interval": 120,
+  "condition": {
+    "type": "origins:ability",
+    "ability": "minecraft:mayfly"
+  }
+}
