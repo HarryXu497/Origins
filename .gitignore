@@ -1,6 +1,10 @@
 # Out Directory
 out
 
+# Testing JSON files
+index.json
+boom.json
+
 # Logs
 logs
 *.log
