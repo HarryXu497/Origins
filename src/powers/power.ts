@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import { ConditionType } from '../@types/conditiontypes/index';
+import { ConditionType } from '../@types/condition/index';
 
 class Power {
     public fileName: string;

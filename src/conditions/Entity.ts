@@ -19,6 +19,12 @@ import ExposedToSunCondition from "./entity/ExposedToSun";
 import { FallDistanceConditionFactory } from "./entity/FallDistance";
 import FallFlyingCondition from "./entity/FallFlying";
 import { FoodLevelConditionFactory } from "./entity/FoodLevel";
+import { HealthConditionFactory } from "./entity/Health";
+import InRainCondition from "./entity/InRain";
+import InvisibleCondition from "./entity/Invisible";
+import LivingCondition from "./entity/Living";
+import MovingCondition from "./entity/Moving";
+import OnBlockCondition from "./entity/OnBlock";
 
 class EntityConditionalsFactory {
     air() {
@@ -83,6 +89,30 @@ class EntityConditionalsFactory {
 
     isFallFlying() {
         return new FallFlyingCondition();
+    }
+
+    health() {
+        return new HealthConditionFactory();
+    }
+
+    isInRain() {
+        return new InRainCondition();
+    }
+
+    isInvisible() {
+        return new InvisibleCondition()
+    }
+
+    isLiving() {
+        return new LivingCondition();
+    }
+
+    isMoving() {
+        return new MovingCondition();
+    }
+
+    onBlock() {
+        return new OnBlockCondition();
     }
 }
 

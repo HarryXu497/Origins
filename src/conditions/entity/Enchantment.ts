@@ -43,37 +43,37 @@ class EnchantmentSumConditionFactory {
         this.instance.calculation = 'sum';
     }
 
-    mustBeGreaterThan(value: number) {
+    isGreaterThan(value: number) {
         this.instance.comparison = '>';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeGreaterThanOrEqualTo(value: number) {
+    isGreaterThanOrEqualTo(value: number) {
         this.instance.comparison = '>=';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeLessThan(value: number) {
+    isLessThan(value: number) {
         this.instance.comparison = '<';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeLessThanOrEqualTo(value: number) {
+    isLessThanOrEqualTo(value: number) {
         this.instance.comparison = '<=';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeEqualTo(value: number) {
+    isEqualTo(value: number) {
         this.instance.comparison = '==';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeNotEqualTo(value: number) {
+    isNotEqualTo(value: number) {
         this.instance.comparison = '!=';
         this.instance.compare_to = value;
         return this.instance;
@@ -88,37 +88,37 @@ class EnchantmentMaxConditionFactory {
         this.instance.calculation = 'max';
     }
 
-    mustBeGreaterThan(value: number) {
+    isGreaterThan(value: number) {
         this.instance.comparison = '>';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeGreaterThanOrEqualTo(value: number) {
+    isGreaterThanOrEqualTo(value: number) {
         this.instance.comparison = '>=';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeLessThan(value: number) {
+    isLessThan(value: number) {
         this.instance.comparison = '<';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeLessThanOrEqualTo(value: number) {
+    isLessThanOrEqualTo(value: number) {
         this.instance.comparison = '<=';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeEqualTo(value: number) {
+    isEqualTo(value: number) {
         this.instance.comparison = '==';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeNotEqualTo(value: number) {
+    isNotEqualTo(value: number) {
         this.instance.comparison = '!=';
         this.instance.compare_to = value;
         return this.instance;

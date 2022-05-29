@@ -1,8 +1,8 @@
-import { Comparison } from "../../@types/datatypes/datatypes";
-import Condition from "../Condition";
+import { Comparison } from '../../@types/datatypes/datatypes';
+import Condition from '../Condition';
 
-class HarvestLevelCondition extends Condition {
-    public readonly type = 'origins:harvest_level';
+class HealthCondition extends Condition {
+    public readonly type = 'origins:health';
     public comparison: Comparison;
     public compare_to: number;
 
@@ -23,11 +23,11 @@ class HarvestLevelCondition extends Condition {
     }
 }
 
-export class HarvestLevelConditionFactory {
-    private readonly instance: HarvestLevelCondition;
+export class HealthConditionFactory {
+    private readonly instance: HealthCondition;
 
     constructor() {
-        this.instance = new HarvestLevelCondition();
+        this.instance = new HealthCondition();
     }
 
     isGreaterThan(value: number) {
@@ -67,5 +67,7 @@ export class HarvestLevelConditionFactory {
     }
 }
 
-
-export default HarvestLevelCondition; 
+export default HealthCondition;
+export function health() {
+    return new HealthConditionFactory();
+}

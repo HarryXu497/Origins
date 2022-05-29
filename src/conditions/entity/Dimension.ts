@@ -20,21 +20,21 @@ export class DimensionConditionFactory {
         this.instance = new DimensionCondition();
     }
 
-    mustBe(dimension: string) {
+    is(dimension: string) {
         this.instance.dimension = dimension;
     }
 
-    mustBeOverworld() {
+    isOverworld() {
         this.instance.dimension = 'minecraft:overworld';
         return this.instance;
     }
 
-    mustBeNether() {
+    isNether() {
         this.instance.dimension = 'minecraft:the_nether';
         return this.instance;
     }
 
-    mustBeEnd() {
+    isEnd() {
         this.instance.dimension = 'minecraft:the_end';
         return this.instance;
     }

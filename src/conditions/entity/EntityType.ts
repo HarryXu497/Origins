@@ -21,7 +21,7 @@ export class EntityTypeConditionFactory {
         this.instance = new EntityTypeCondition();
     }
 
-    mustBe(entity: string) {
+    is(entity: string) {
         this.instance.entity_type = entity;
         return this.instance;
     }

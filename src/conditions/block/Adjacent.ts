@@ -1,8 +1,10 @@
-import { Comparison } from "../../@types/datatypes/datatypes";
-import Condition from "../Condition";
+import { BlockConditionType } from '../../@types/condition/block';
+import { Comparison } from '../../@types/datatypes/datatypes';
+import Condition from '../Condition';
 
-class HarvestLevelCondition extends Condition {
-    public readonly type = 'origins:harvest_level';
+class AdjacentCondition extends Condition {
+    public readonly type = 'origins:adjacent';
+    public adjacent_condition: BlockConditionType;
     public comparison: Comparison;
     public compare_to: number;
 
@@ -21,13 +23,22 @@ class HarvestLevelCondition extends Condition {
         this.compare_to = value;
         return this;
     }
+
+    setAdjacentCondition(condition: BlockConditionType) {
+        this.adjacent_condition = condition;
+    }
 }
 
-export class HarvestLevelConditionFactory {
-    private readonly instance: HarvestLevelCondition;
+export class AdjacentConditionFactory {
+    private readonly instance: AdjacentCondition;
 
-    constructor() {
-        this.instance = new HarvestLevelCondition();
+    constructor(condition?: BlockConditionType) {
+        this.instance = new AdjacentCondition();
+        this.instance.adjacent_condition = condition;
+    }
+
+    setAdjacentCondition(condition: BlockConditionType) {
+        this.instance.adjacent_condition = condition;
     }
 
     isGreaterThan(value: number) {
@@ -67,5 +78,4 @@ export class HarvestLevelConditionFactory {
     }
 }
 
-
-export default HarvestLevelCondition; 
+export default AdjacentCondition;

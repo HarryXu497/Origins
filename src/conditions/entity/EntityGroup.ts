@@ -23,22 +23,22 @@ export class EntityGroupConditionFactory {
         this.instance = new EntityGroupCondition();
     }
 
-    mustBeUndead() {
+    isUndead() {
         this.instance.group = 'undead';
         return this.instance;
     }
 
-    mustBeArthropod() {
+    isArthropod() {
         this.instance.group = 'arthropod';
         return this.instance;
     }
 
-    mustBeIllager () {
+    isIllager () {
         this.instance.group = 'illager';
         return this.instance;
     }
 
-    mustBeAquatic() {
+    isAquatic() {
         this.instance.group = 'aquatic';
         return this.instance;
     }

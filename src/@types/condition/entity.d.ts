@@ -20,8 +20,15 @@ import ExposedToSkyCondition from '../../conditions/entity/ExposedToSky';
 import FallDistanceCondition from '../../conditions/entity/FallDistance';
 import FallFlyingCondition from '../../conditions/entity/FallFlying';
 import FoodLevelCondition from '../../conditions/entity/FoodLevel';
+import GamemodeCondition from '../../conditions/entity/Gamemode';
+import HealthCondition from '../../conditions/entity/Health';
+import InRainCondition from '../../conditions/entity/InRain';
+import Condition from '../../conditions/Condition';
+import InvisibleCondition from '../../conditions/entity/Invisible';
+import LivingCondition from '../../conditions/entity/Living';
 
 export type EntityConditionType = 
+    Condition |
     AbilityCondition |
     AdvancementCondition |
     AirCondition |
@@ -43,7 +50,12 @@ export type EntityConditionType =
     ExposedToSunCondition |
     FallDistanceCondition |
     FallFlyingCondition |
-    FoodLevelCondition;
+    FoodLevelCondition |
+    GamemodeCondition |
+    HealthCondition |
+    InRainCondition |
+    InvisibleCondition |
+    LivingCondition;
     
     
 

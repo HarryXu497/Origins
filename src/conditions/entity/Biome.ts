@@ -1,4 +1,4 @@
-import { BiomeConditionTypes } from "../../@types/conditiontypes/biomes";
+import { BiomeConditionTypes } from "../../@types/condition/biomes";
 import CategoryCondition from '../biome/Category';
 import HighHumidityCondition from "../biome/HighHumidity";
 import { PrecipitationConditionFactory } from '../biome/Precipitation';
@@ -46,7 +46,7 @@ export class BiomeConditionFactory {
         this.instance = new BiomeCondition(biome);
     }
 
-    mustBe(...biomes: string[]) {
+    is(...biomes: string[]) {
         if (biome.length === 1) {
             this.instance.biome = biomes[0];
         }
@@ -56,12 +56,12 @@ export class BiomeConditionFactory {
         return this.instance;
     }
 
-    mustBeInCategory(category: string) {
+    isInCategory(category: string) {
         this.instance.condition = new CategoryCondition(category);
         return this.instance;
     }
 
-    mustBeHighHumidity() {
+    isHighHumidity() {
         this.instance.condition = new HighHumidityCondition();
         return this.instance;
     }

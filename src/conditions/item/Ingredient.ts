@@ -22,17 +22,17 @@ export class IngredientConditionFactory {
         this.instance = new IngredientCondition();
     }
 
-    mustBe(item: string) {
+    is(item: string) {
         this.instance.ingredient = { item };
         return this.instance;
     }
 
-    mustBeIn(tag: string) {
+    isIn(tag: string) {
         this.instance.ingredient = { tag };
         return this.instance;
     }
 
-    mustBeInEnum(...ingredients: Ingredient[]) {
+    isInEnum(...ingredients: Ingredient[]) {
         this.instance.ingredient = ingredients;
         return this.instance;
     }

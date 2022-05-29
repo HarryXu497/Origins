@@ -1,4 +1,4 @@
-import { ItemConditionType } from "../../@types/conditiontypes/item";
+import { ItemConditionType } from "../../@types/condition/item";
 import Condition from "../Condition";
 
 type Slot = 'mainhand' | 'offhand' | 'head' | 'chest' | 'legs' | 'feet';

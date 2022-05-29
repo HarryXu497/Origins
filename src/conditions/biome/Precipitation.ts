@@ -21,17 +21,17 @@ export class PrecipitationConditionFactory {
         this.instance = new PrecipitationCondition(precipitation);
     }
 
-    mustBeRaining() {
+    isRaining() {
         this.instance.precipitation = 'rain';
         return this.instance;
     }
 
-    mustBeSnowing() {
+    isSnowing() {
         this.instance.precipitation = 'snow';
         return this.instance;
     }
 
-    mustNotBePrecipitating() {
+    isNotPrecipitating() {
         this.instance.precipitation = 'none';
         return this.instance;
     }

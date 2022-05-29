@@ -21,7 +21,7 @@ export class AdvancementConditionFactory {
         this.instance = new AdvancementCondition();
     }
 
-    mustBe(advancement: string) {
+    is(advancement: string) {
         this.instance.advancement = advancement;
         return this.instance;
     }

@@ -1,6 +1,5 @@
 import { Comparison } from "../../@types/datatypes/datatypes";
 import Condition from "../Condition";
-import { enchantment } from '../entity/Enchantment';
 
 class EnchantmentCondition extends Condition {
     public readonly type = 'origins:enchantment';
@@ -37,37 +36,37 @@ export class EnchantmentConditionFactory {
         this.instance = new EnchantmentCondition(enchantment);
     }
 
-    mustBeGreaterThan(value: number) {
+    isGreaterThan(value: number) {
         this.instance.comparison = '>';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeGreaterThanOrEqualTo(value: number) {
+    isGreaterThanOrEqualTo(value: number) {
         this.instance.comparison = '>=';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeLessThan(value: number) {
+    isLessThan(value: number) {
         this.instance.comparison = '<';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeLessThanOrEqualTo(value: number) {
+    isLessThanOrEqualTo(value: number) {
         this.instance.comparison = '<=';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeEqualTo(value: number) {
+    isEqualTo(value: number) {
         this.instance.comparison = '==';
         this.instance.compare_to = value;
         return this.instance;
     }
 
-    mustBeNotEqualTo(value: number) {
+    isNotEqualTo(value: number) {
         this.instance.comparison = '!=';
         this.instance.compare_to = value;
         return this.instance;

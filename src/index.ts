@@ -1,10 +1,9 @@
+import { block } from './conditions/Block.js';
+import { fluid } from './conditions/block/Fluid.js';
 import { player } from './conditions/Player.js';
 import Origin from './origins.js';
 import Burn from './powers/regular/Burn';
-import { amount } from './conditions/item/Amount';
-import { armorValue } from './conditions/item/ArmorValue';
-import { item } from './conditions/Item';
-import { ingredient } from './conditions/Ingredient';
+
 
 
 
@@ -16,8 +15,10 @@ power
     .setBurnDuration(10)
     .setInterval(120)
     .setDescription("Burns enemies with Sfan power.")
-    .if( 
-        player().foodLevel().mustBeGreaterThanOrEqualTo(12)
+    .setCondition( 
+        player().onBlock().where(
+            fluid().isEmpty()
+        )
     )
 
 

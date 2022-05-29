@@ -1,4 +1,4 @@
-import { EntityConditionType } from "../conditiontypes/entity";
+import { EntityConditionType } from "../condition/entity";
 
 // Types
 export type ModifierOperation = 'addition' | 'multiply_base' | 'multiply_total';
