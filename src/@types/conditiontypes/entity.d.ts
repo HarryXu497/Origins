@@ -13,6 +13,7 @@ import DimensionCondition from '../../conditions/entity/Dimension';
 import EnchantmentCondition from '../../conditions/entity/Enchantment';
 import ElytraFlightPossibleCondition from '../../conditions/entity/ElytraFlightPossible';
 import EntityGroupCondition from '../../conditions/entity/EntityGroup';
+import EntityTypeCondition from '../../conditions/entity/EntityType';
 
 export type EntityConditionType = 
     AbilityCondition |
@@ -29,7 +30,8 @@ export type EntityConditionType =
     DimensionCondition |
     ElytraFlightPossibleCondition |
     EnchantmentCondition |
-    EntityGroupCondition;
+    EntityGroupCondition |
+    EntityTypeCondition;
     
     
 

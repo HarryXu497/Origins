@@ -6,6 +6,6 @@
   "interval": 120,
   "condition": {
     "type": "origins:entity_group",
-    "group": "undead"
+    "entity_type": "minecraft:creeper"
   }
 }
