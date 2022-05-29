@@ -1,8 +1,8 @@
-import { block } from './conditions/Block.js';
-import { fluid } from './conditions/block/Fluid.js';
 import { player } from './conditions/Player.js';
 import Origin from './origins.js';
 import Burn from './powers/regular/Burn';
+import { block } from './conditions/Block';
+import { fluid } from './conditions/Fluid';
 
 
 
@@ -17,7 +17,7 @@ power
     .setDescription("Burns enemies with Sfan power.")
     .setCondition( 
         player().onBlock().where(
-            fluid().isEmpty()
+            block().isWaterLoggable()
         )
     )
 

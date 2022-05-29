@@ -66,7 +66,6 @@ class Power {
         delete obj.id;
         delete obj.namespace;
 
-        console.log(this.fileName)
         fs.writeFile(this.fileName + ".json", JSON.stringify(obj, null, 2), (err) => {
             if (err) {
                 throw err;

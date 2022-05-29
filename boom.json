@@ -7,10 +7,7 @@
   "condition": {
     "type": "origins:on_block",
     "block_condition": {
-      "type": "origins:fluid",
-      "fluid_condition": {
-        "type": "origins:empty"
-      }
+      "type": "origins:water_loggable"
     }
   }
 }
