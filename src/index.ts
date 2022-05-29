@@ -1,9 +1,13 @@
+import { player } from './conditions/Player.js';
 import Origin from './origins.js';
 import Burn from './powers/regular/Burn';
+import { amount } from './conditions/item/Amount';
+import { armorValue } from './conditions/item/ArmorValue';
+import { item } from './conditions/Item';
+import { ingredient } from './conditions/Ingredient';
 
-import { elytra } from './conditions/entity/ElytraFlightPossible';
-import { entityGroup } from './conditions/entity/EntityGroup';
-import { entityType } from './conditions/entity/EntityType';
+
+
 
 const origin = new Origin("Sfan")
 const power = new Burn("custom", "boom", "power");
@@ -12,8 +16,8 @@ power
     .setBurnDuration(10)
     .setInterval(120)
     .setDescription("Burns enemies with Sfan power.")
-    .setCondition(
-        entityType().mustBe("minecraft:creeper")
+    .if( 
+        player().foodLevel().mustBeGreaterThanOrEqualTo(12)
     )
 
 

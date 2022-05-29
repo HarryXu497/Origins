@@ -22,7 +22,7 @@ class BrightnessCondition extends Condition {
     }
 }
 
-class BrightnessConditionFactory {
+export class BrightnessConditionFactory {
     private readonly instance: BrightnessCondition;
 
     constructor() {
@@ -62,6 +62,12 @@ class BrightnessConditionFactory {
     mustBeNotEqualTo(value: number) {
         this.instance.comparison = '!=';
         this.instance.compare_to = value;
+        return this.instance;
+    }
+
+    mobsCanSpawn() {
+        this.instance.comparison = '==';
+        this.instance.compare_to = 0;
         return this.instance;
     }
 }

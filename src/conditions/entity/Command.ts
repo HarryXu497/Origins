@@ -29,7 +29,7 @@ class CommandCondition extends Condition {
     }
 }
 
-class CommandConditionFactory {
+export class CommandConditionFactory {
     private readonly instance: CommandCondition;
 
     constructor(command: string) {

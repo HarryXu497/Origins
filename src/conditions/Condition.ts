@@ -3,6 +3,7 @@ class Condition {
 
     invert() {
         this.inverted = true;
+        return this;
     }
 }
 

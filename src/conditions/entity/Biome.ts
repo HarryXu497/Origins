@@ -39,7 +39,7 @@ class BiomeCondition extends Condition {
     }
 }
 
-class BiomeFactory {
+export class BiomeConditionFactory {
     private readonly instance: BiomeCondition;
 
     constructor(biome?: string | string[]) {
@@ -77,5 +77,5 @@ class BiomeFactory {
 
 export default BiomeCondition;
 export function biome() {
-    return new BiomeFactory();
+    return new BiomeConditionFactory();
 }

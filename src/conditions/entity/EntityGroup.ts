@@ -16,7 +16,7 @@ class EntityGroupCondition extends Condition {
     }
 }
 
-class EntityGroupConditionFactory {
+export class EntityGroupConditionFactory {
     private readonly instance: EntityGroupCondition;
 
     constructor() {
@@ -40,6 +40,11 @@ class EntityGroupConditionFactory {
 
     mustBeAquatic() {
         this.instance.group = 'aquatic';
+        return this.instance;
+    }
+
+    canBeAny() {
+        this.instance.group = 'default';
         return this.instance;
     }
 }

@@ -1,31 +1,40 @@
 import { Comparison } from "../../@types/datatypes/datatypes";
 import Condition from "../Condition";
+import { enchantment } from '../entity/Enchantment';
 
-class AttributeCondition extends Condition {
-    public readonly type = 'origins:attribute';
-    public attribute: string;
+class EnchantmentCondition extends Condition {
+    public readonly type = 'origins:enchantment';
+    public enchantment: string;
     public comparison: Comparison;
     public compare_to: number;
 
-    setAttribute(attribute: string) {
-        this.attribute = attribute;
+    constructor(enchantment?: string, comparison?: Comparison, compare_to?: number) {
+        super();
+        this.enchantment = enchantment;
+        this.comparison = comparison;
+        this.compare_to = compare_to;
+    }
+
+    setEnchantment(value: string) {
+        this.enchantment = value;
     }
 
     setComparison(comparison: Comparison) {
-        this.comparison = comparison;
+        this.comparison = comparison
+        return this;
     }
 
-    setCompareTo(compareTo: number) {
-        this.compare_to = compareTo;
+    setCompareTo(value: number) {
+        this.compare_to = value;
+        return this;
     }
 }
 
-export class AttributeConditionFactory {
-    private readonly instance: AttributeCondition;
+export class EnchantmentConditionFactory {
+    private readonly instance: EnchantmentCondition;
 
-    constructor(attribute: string) {
-        this.instance = new AttributeCondition();
-        this.instance.attribute = attribute;
+    constructor(enchantment: string) {
+        this.instance = new EnchantmentCondition(enchantment);
     }
 
     mustBeGreaterThan(value: number) {
@@ -66,7 +75,4 @@ export class AttributeConditionFactory {
 }
 
 
-export default AttributeCondition;
-export function attribute(attribute: string) {
-    return new AttributeConditionFactory(attribute);
-}
+export default EnchantmentCondition;

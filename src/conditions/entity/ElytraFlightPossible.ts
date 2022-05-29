@@ -14,7 +14,7 @@ class ElytraFlightPossibleCondition extends Condition {
     }
 }
 
-class ElytraFlightPossibleConditionFactory {
+export class ElytraFlightPossibleConditionFactory {
     private readonly instance: ElytraFlightPossibleCondition;
 
     constructor() {
@@ -41,7 +41,7 @@ class ElytraFlightPossibleConditionFactory {
         return this.instance;
     }
 
-    mustBeAbleToFly() {
+    ableToFly() {
         this.instance.check_state = true;
         this.instance.check_abilities = true;
         return this.instance;

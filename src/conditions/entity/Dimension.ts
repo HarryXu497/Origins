@@ -13,7 +13,7 @@ class DimensionCondition extends Condition {
     }
 }
 
-class DimensionConditionFactory {
+export class DimensionConditionFactory {
     private readonly instance: DimensionCondition;
 
     constructor() {

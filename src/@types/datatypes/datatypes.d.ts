@@ -1,7 +1,10 @@
-import { EntityConditionType } from '../actiontypes/entity';
+import { EntityConditionType } from "../conditiontypes/entity";
+
 // Types
 export type ModifierOperation = 'addition' | 'multiply_base' | 'multiply_total';
 export type Comparison = '<' | '<=' | '>' | '>=' | '==' | '!=';
+export type MultipleIngredients = SingularIngredient[];
+export type Ingredient = SingularIngredient | MultipleIngredients;
 export type ParticleEffect = string | ParticleEffectObject;
 export type Keybinding = 
     'key.origins.primary_active' | 
@@ -67,13 +70,13 @@ export interface CraftingRecipe {
         item: string;
         count: number;
     }
-    ingredients?: (Ingredient | Ingredient[])[];
+    ingredients?: (SingularIngredient | MultipleIngredients)[];
 }
 
 export interface CraftingRecipeUnshaped extends CraftingRecipe {
     type: 'minecraft:crafting_shapeless';
 
-    ingredients?: (Ingredient | Ingredient[])[];
+    ingredients?: (SingularIngredient | MultipleIngredients)[];
 }
 
 export interface CraftingRecipeShaped extends CraftingRecipe {
@@ -81,7 +84,7 @@ export interface CraftingRecipeShaped extends CraftingRecipe {
 
     pattern: string[];
     key: {
-        [key: string]: Ingredient;
+        [key: string]: SingularIngredient;
     }
 }
 
@@ -102,7 +105,7 @@ export interface HudRender {
     inverted?: boolean;
 }
 
-export interface Ingredient {
+export interface SingularIngredient {
     item?: string;
     tag?: string;
 }

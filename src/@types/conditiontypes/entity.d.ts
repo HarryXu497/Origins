@@ -14,6 +14,12 @@ import EnchantmentCondition from '../../conditions/entity/Enchantment';
 import ElytraFlightPossibleCondition from '../../conditions/entity/ElytraFlightPossible';
 import EntityGroupCondition from '../../conditions/entity/EntityGroup';
 import EntityTypeCondition from '../../conditions/entity/EntityType';
+import EquippedItemCondition from '../../conditions/entity/EquippedItem';
+import ExposedToSunCondition from '../../conditions/entity/ExposedToSun';
+import ExposedToSkyCondition from '../../conditions/entity/ExposedToSky';
+import FallDistanceCondition from '../../conditions/entity/FallDistance';
+import FallFlyingCondition from '../../conditions/entity/FallFlying';
+import FoodLevelCondition from '../../conditions/entity/FoodLevel';
 
 export type EntityConditionType = 
     AbilityCondition |
@@ -31,7 +37,13 @@ export type EntityConditionType =
     ElytraFlightPossibleCondition |
     EnchantmentCondition |
     EntityGroupCondition |
-    EntityTypeCondition;
+    EntityTypeCondition |
+    EquippedItemCondition |
+    ExposedToSkyCondition |
+    ExposedToSunCondition |
+    FallDistanceCondition |
+    FallFlyingCondition |
+    FoodLevelCondition;
     
     
 

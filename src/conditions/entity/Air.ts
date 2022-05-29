@@ -23,7 +23,7 @@ class AirCondition extends Condition {
     }
 }
 
-class AirConditionFactory {
+export class AirConditionFactory {
     private readonly instance: AirCondition;
 
     constructor() {

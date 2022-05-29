@@ -9,36 +9,11 @@ class AbilityCondition extends Condition {
         this.ability = ability;
         return this;
     }
-
-    flying() {
-        this.ability = 'minecraft:flying';
-        return this;
-    }
-
-    ableToInstantlyDestroyBlocks() {
-        this.ability = 'minecraft:instabuild';
-        return this;
-    }
-
-    invulnerable() {
-        this.ability = 'minecraft:invulnerable';
-        return this;
-    }
-
-    ableToBuild() {
-        this.ability = 'minecraft:mayBuild';
-        return this;
-    }
-
-    ableToFly() {
-        this.ability = 'minecraft:mayfly';
-        return this;
-    }
 }
 
-class AbilityConditionFactory {
+export class AbilityConditionFactory {
 
-    private readonly instance;
+    private readonly instance: AbilityCondition;
 
     constructor() {
         this.instance = new AbilityCondition()

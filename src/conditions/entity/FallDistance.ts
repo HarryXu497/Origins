@@ -1,31 +1,33 @@
-import { Comparison } from "../../@types/datatypes/datatypes";
-import Condition from "../Condition";
+import { Comparison } from '../../@types/datatypes/datatypes';
+import Condition from '../Condition';
 
-class AttributeCondition extends Condition {
-    public readonly type = 'origins:attribute';
-    public attribute: string;
+class FallDistanceCondition extends Condition {
+    public readonly type = 'origins:fall_distance';
     public comparison: Comparison;
     public compare_to: number;
 
-    setAttribute(attribute: string) {
-        this.attribute = attribute;
+    constructor(comparison?: Comparison, compare_to?: number) {
+        super();
+        this.comparison = comparison;
+        this.compare_to = compare_to;
     }
 
     setComparison(comparison: Comparison) {
-        this.comparison = comparison;
+        this.comparison = comparison
+        return this;
     }
 
-    setCompareTo(compareTo: number) {
-        this.compare_to = compareTo;
+    setCompareTo(value: number) {
+        this.compare_to = value;
+        return this;
     }
 }
 
-export class AttributeConditionFactory {
-    private readonly instance: AttributeCondition;
+export class FallDistanceConditionFactory {
+    private readonly instance: FallDistanceCondition;
 
-    constructor(attribute: string) {
-        this.instance = new AttributeCondition();
-        this.instance.attribute = attribute;
+    constructor() {
+        this.instance = new FallDistanceCondition();
     }
 
     mustBeGreaterThan(value: number) {
@@ -65,8 +67,7 @@ export class AttributeConditionFactory {
     }
 }
 
-
-export default AttributeCondition;
-export function attribute(attribute: string) {
-    return new AttributeConditionFactory(attribute);
+export default FallDistanceCondition;
+export function falldistance() {
+    return new FallDistanceConditionFactory();
 }

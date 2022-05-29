@@ -14,7 +14,7 @@ class EntityTypeCondition extends Condition {
     }
 }
 
-class EntityTypeConditionFactory {
+export class EntityTypeConditionFactory {
     private readonly instance: EntityTypeCondition;
 
     constructor() {

@@ -56,6 +56,10 @@ class Power {
         return this;
     }
 
+    if(value: ConditionType) {
+        return this.setCondition(value)
+    }
+
     writeToFile() {
         const obj = { ...this };
         delete obj.fileName;

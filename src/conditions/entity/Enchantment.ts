@@ -125,7 +125,7 @@ class EnchantmentMaxConditionFactory {
     }
 }
 
-class EnchantmentConditionFactory {
+export class EnchantmentConditionFactory {
     public enchantment: string;
 
     constructor(enchantment: string) {

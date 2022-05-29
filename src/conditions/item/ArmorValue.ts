@@ -1,31 +1,33 @@
 import { Comparison } from "../../@types/datatypes/datatypes";
 import Condition from "../Condition";
 
-class AttributeCondition extends Condition {
-    public readonly type = 'origins:attribute';
-    public attribute: string;
+class ArmorValueCondition extends Condition {
+    public readonly type = 'origins:armor_value';
     public comparison: Comparison;
     public compare_to: number;
 
-    setAttribute(attribute: string) {
-        this.attribute = attribute;
+    constructor(comparison?: Comparison, compare_to?: number) {
+        super();
+        this.comparison = comparison;
+        this.compare_to = compare_to;
     }
 
     setComparison(comparison: Comparison) {
-        this.comparison = comparison;
+        this.comparison = comparison
+        return this;
     }
 
-    setCompareTo(compareTo: number) {
-        this.compare_to = compareTo;
+    setCompareTo(value: number) {
+        this.compare_to = value;
+        return this;
     }
 }
 
-export class AttributeConditionFactory {
-    private readonly instance: AttributeCondition;
+export class ArmorValueConditionFactory {
+    private readonly instance: ArmorValueCondition;
 
-    constructor(attribute: string) {
-        this.instance = new AttributeCondition();
-        this.instance.attribute = attribute;
+    constructor() {
+        this.instance = new ArmorValueCondition();
     }
 
     mustBeGreaterThan(value: number) {
@@ -66,7 +68,7 @@ export class AttributeConditionFactory {
 }
 
 
-export default AttributeCondition;
-export function attribute(attribute: string) {
-    return new AttributeConditionFactory(attribute);
+export default ArmorValueCondition; 
+export function armorValue() {
+    return new ArmorValueConditionFactory();
 }
