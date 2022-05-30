@@ -38,6 +38,14 @@ import PowerCondition from './entity/Power';
 import HealthConditionFactory from "./Health";
 import { SaturationLevelConditionFactory } from './entity/SaturationLevel';
 import SneakingCondition from './entity/Sneaking';
+import SubmergedInCondition from './entity/SubmergedIn';
+import SwimmingCondition from "./entity/Swimming";
+import { TimeOfDayConditionFactory } from './entity/TimeOfDay';
+import UsingEffectiveToolCondition from './entity/UsingEffectiveTool';
+import { ItemConditionType } from '../@types/condition/item';
+import UsingItemCondition from './entity/UsingItem';
+import { XPLevelsConditionFactory } from './entity/XPLevels';
+import XPConditonFactory from "./XP";
 
 class PlayerConditionalsFactory {
     abilities() {
@@ -196,8 +204,28 @@ class PlayerConditionalsFactory {
         return new SneakingCondition();
     }
 
-    isSubmergedIn(fluid: 'sdf' | string) {
+    isSubmergedIn(fluid: string) {
+        return new SubmergedInCondition(fluid);
+    }
 
+    isSwimming() {
+        return new SwimmingCondition();
+    }
+
+    timeOfDay() {
+        return new TimeOfDayConditionFactory();
+    }
+
+    isUsingEffectiveTool() {
+        return new UsingEffectiveToolCondition();
+    }
+
+    isUsingItem() {
+        return new UsingItemCondition()
+    }
+
+    xp() {
+        return new XPConditonFactory()
     }
 }
 
