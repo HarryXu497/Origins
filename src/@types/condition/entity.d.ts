@@ -34,6 +34,15 @@ import PowerActiveCondition from '../../conditions/entity/PowerActive';
 import PowerTypeCondition from '../../conditions/entity/PowerType';
 import PowerCondition from '../../conditions/entity/Power';
 import RelativeHealthCondition from '../../conditions/entity/RelativeHealth';
+import SaturationLevelCondition from '../../conditions/entity/SaturationLevel';
+import SneakingCondition from '../../conditions/entity/Sneaking';
+import SprintingCondition from '../../conditions/entity/Sprinting';
+import SubmergedInCondition from '../../conditions/entity/SubmergedIn';
+import SwimmingCondition from '../../conditions/entity/Swimming';
+import TamedCondition from '../../conditions/entity/Tamed';
+import TimeOfDayCondition from '../../conditions/entity/TimeOfDay';
+import UsingEffectiveToolCondition from '../../conditions/entity/UsingEffectiveTool';
+import UsingItemCondition from '../../conditions/entity/UsingItem';
 
 export type EntityConditionType = 
     Condition |
@@ -71,7 +80,16 @@ export type EntityConditionType =
     PowerActiveCondition |
     PowerTypeCondition |
     PowerCondition |
-    RelativeHealthCondition;
+    RelativeHealthCondition |
+    SaturationLevelCondition |
+    SneakingCondition |
+    SprintingCondition |
+    SubmergedInCondition |
+    SwimmingCondition |
+    TamedCondition |
+    TimeOfDayCondition |
+    UsingEffectiveToolCondition |
+    UsingItemCondition;
     
     
 

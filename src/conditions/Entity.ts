@@ -25,6 +25,11 @@ import PowerActiveCondition from "./entity/PowerActive";
 import PowerTypeCondition from "./entity/PowerType";
 import PowerCondition from "./entity/Power";
 import HealthConditionFactory from "./Health";
+import TamedCondition from './entity/Tamed';
+import SubmergedInCondition from "./entity/SubmergedIn";
+import { TimeOfDayConditionFactory } from "./entity/TimeOfDay";
+import { ItemConditionType } from "../@types/condition/item";
+import UsingItemCondition from "./entity/UsingItem";
 
 class EntityConditionalsFactory {
     air() {
@@ -129,6 +134,22 @@ class EntityConditionalsFactory {
 
     hasPower(power: string, source?: string) {
         return new PowerCondition(power, source);
+    }
+
+    isTamed() {
+        return new TamedCondition();
+    }
+
+    isSubmergedIn(fluid: string) {
+        return new SubmergedInCondition(fluid);
+    }
+
+    timeOfDay() {
+        return new TimeOfDayConditionFactory();
+    }
+
+    isUsingItem() {
+        return new UsingItemCondition();
     }
 }
 

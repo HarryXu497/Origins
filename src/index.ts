@@ -3,6 +3,8 @@ import Origin from './origins.js';
 import Burn from './powers/regular/Burn';
 import { block } from './conditions/Block';
 import { fluid } from './conditions/Fluid';
+import { entity } from './conditions/Entity';
+import { item } from './conditions/Item';
 
 
 
@@ -16,14 +18,7 @@ power
     .setInterval(120)
     .setDescription("Burns enemies with Sfan power.")
     .setCondition( 
-        player().onBlock().where(
-            block().adjacentCountOf(
-                block()
-                    .blastResistance()
-                    .isGreaterThanOrEqualTo(10)
-            )
-            .isGreaterThanOrEqualTo(10)
-        )
+        player().xp().levels().isGreaterThanOrEqualTo(10)
     )
 
 
