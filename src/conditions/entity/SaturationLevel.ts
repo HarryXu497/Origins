@@ -1,8 +1,8 @@
 import { Comparison } from '../../@types/datatypes/datatypes';
 import Condition from '../Condition';
 
-class AbsoluteHealthCondition extends Condition {
-    public readonly type = 'origins:health';
+class SaturationLevelCondition extends Condition {
+    public readonly type = 'origins:saturation_level';
     public comparison: Comparison;
     public compare_to: number;
 
@@ -23,11 +23,11 @@ class AbsoluteHealthCondition extends Condition {
     }
 }
 
-export class AbsoluteHealthConditionFactory {
-    private readonly instance: AbsoluteHealthCondition;
+export class SaturationLevelConditionFactory {
+    private readonly instance: SaturationLevelCondition;
 
     constructor() {
-        this.instance = new AbsoluteHealthCondition();
+        this.instance = new SaturationLevelCondition();
     }
 
     isGreaterThan(value: number) {
@@ -67,7 +67,5 @@ export class AbsoluteHealthConditionFactory {
     }
 }
 
-export default AbsoluteHealthCondition;
-export function health() {
-    return new AbsoluteHealthConditionFactory();
-}
+export default SaturationLevelCondition;
+

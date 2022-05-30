@@ -23,7 +23,6 @@ import { FallDistanceConditionFactory } from './entity/FallDistance';
 import FallFlyingCondition from './entity/FallFlying';
 import { FoodLevelConditionFactory } from "./entity/FoodLevel";
 import { GamemodeConditionFactory } from './entity/Gamemode';
-import { HealthConditionFactory } from './entity/Health';
 import InRainCondition from "./entity/InRain";
 import { EntityTagConditionFactory } from './entity/InTag';
 import InvisibleCondition from './entity/Invisible';
@@ -31,6 +30,14 @@ import LivingCondition from './entity/Living';
 import MovingCondition from './entity/Moving';
 import OnBlockCondition from './entity/OnBlock';
 import { BlockConditionType } from '../@types/condition/block';
+import OnFireCondition from "./entity/OnFire";
+import { OriginConditionFactory } from './entity/Origin';
+import PowerActiveCondition from './entity/PowerActive';
+import PowerTypeCondition from './entity/PowerType';
+import PowerCondition from './entity/Power';
+import HealthConditionFactory from "./Health";
+import { SaturationLevelConditionFactory } from './entity/SaturationLevel';
+import SneakingCondition from './entity/Sneaking';
 
 class PlayerConditionalsFactory {
     abilities() {
@@ -159,6 +166,38 @@ class PlayerConditionalsFactory {
 
     onBlock(condition?: BlockConditionType) {
         return new OnBlockCondition(condition);
+    }
+
+    isOnFire() {
+        return new OnFireCondition()
+    }
+
+    origin() {
+        return new OriginConditionFactory();
+    }
+
+    powerActive(power: string) {
+        return new PowerActiveCondition(power);
+    }
+
+    hasPowerType(power: string) {
+        return new PowerTypeCondition(power);
+    }
+
+    hasPower(power: string, source?: string) {
+        return new PowerCondition(power, source);
+    }
+
+    saturation() {
+        return new SaturationLevelConditionFactory();
+    }
+
+    isSneaking() {
+        return new SneakingCondition();
+    }
+
+    isSubmergedIn(fluid: 'sdf' | string) {
+
     }
 }
 

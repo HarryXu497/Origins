@@ -26,6 +26,14 @@ import InRainCondition from '../../conditions/entity/InRain';
 import Condition from '../../conditions/Condition';
 import InvisibleCondition from '../../conditions/entity/Invisible';
 import LivingCondition from '../../conditions/entity/Living';
+import OnBlockCondition from '../../conditions/entity/OnBlock';
+import MovingCondition from '../../conditions/entity/Moving';
+import OnFireCondition from '../../conditions/entity/OnFire';
+import OriginCondition from '../../conditions/entity/Origin';
+import PowerActiveCondition from '../../conditions/entity/PowerActive';
+import PowerTypeCondition from '../../conditions/entity/PowerType';
+import PowerCondition from '../../conditions/entity/Power';
+import RelativeHealthCondition from '../../conditions/entity/RelativeHealth';
 
 export type EntityConditionType = 
     Condition |
@@ -55,7 +63,15 @@ export type EntityConditionType =
     HealthCondition |
     InRainCondition |
     InvisibleCondition |
-    LivingCondition;
+    LivingCondition |
+    MovingCondition |
+    OnBlockCondition |
+    OnFireCondition |
+    OriginCondition |
+    PowerActiveCondition |
+    PowerTypeCondition |
+    PowerCondition |
+    RelativeHealthCondition;
     
     
 

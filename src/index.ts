@@ -17,7 +17,12 @@ power
     .setDescription("Burns enemies with Sfan power.")
     .setCondition( 
         player().onBlock().where(
-            block().isWaterLoggable()
+            block().adjacentCountOf(
+                block()
+                    .blastResistance()
+                    .isGreaterThanOrEqualTo(10)
+            )
+            .isGreaterThanOrEqualTo(10)
         )
     )
 
