@@ -69,6 +69,6 @@ class BlockConditionFactory {
 }
 
 
-export function block() {
+export default function block() {
     return new BlockConditionFactory();
 }

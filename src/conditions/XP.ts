@@ -9,7 +9,6 @@ class XPConditonFactory {
     points() {
         return new XPPointsConditionFactory();
     }
-
 }
 
 export default XPConditonFactory

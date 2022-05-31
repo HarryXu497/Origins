@@ -43,9 +43,10 @@ import TamedCondition from '../../conditions/entity/Tamed';
 import TimeOfDayCondition from '../../conditions/entity/TimeOfDay';
 import UsingEffectiveToolCondition from '../../conditions/entity/UsingEffectiveTool';
 import UsingItemCondition from '../../conditions/entity/UsingItem';
+import XPLevelsCondition from '../../conditions/entity/XPLevels';
+import XPPointsCondition from '../../conditions/entity/XPPoints';
 
 export type EntityConditionType = 
-    Condition |
     AbilityCondition |
     AdvancementCondition |
     AirCondition |
@@ -89,7 +90,9 @@ export type EntityConditionType =
     TamedCondition |
     TimeOfDayCondition |
     UsingEffectiveToolCondition |
-    UsingItemCondition;
+    UsingItemCondition |
+    XPLevelsCondition|
+    XPPointsCondition;
     
     
 

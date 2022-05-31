@@ -18,6 +18,6 @@ class FluidConditionFactory {
 }
 
 
-export function fluid() {
+export default function fluid() {
     return new FluidConditionFactory();
 }

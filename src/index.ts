@@ -1,10 +1,11 @@
-import { player } from './conditions/Player.js';
+import player from './conditions/Player.js';
 import Origin from './origins.js';
 import Burn from './powers/regular/Burn';
-import { block } from './conditions/Block';
-import { fluid } from './conditions/Fluid';
-import { entity } from './conditions/Entity';
-import { item } from './conditions/Item';
+import block from './conditions/Block';
+import fluid from './conditions/Fluid';
+import entity from './conditions/Entity';
+import item from './conditions/Item';
+import damage from './conditions/Damage';
 
 
 
@@ -18,7 +19,7 @@ power
     .setInterval(120)
     .setDescription("Burns enemies with Sfan power.")
     .setCondition( 
-        player().xp().levels().isGreaterThanOrEqualTo(10)
+        player().isDaytime()
     )
 
 

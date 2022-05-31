@@ -55,6 +55,6 @@ class ItemConditionalsFactory {
     }
 }
 
-export function item() {
+export default function item() {
     return new ItemConditionalsFactory();
 }

@@ -47,7 +47,7 @@ import UsingItemCondition from './entity/UsingItem';
 import { XPLevelsConditionFactory } from './entity/XPLevels';
 import XPConditonFactory from "./XP";
 
-class PlayerConditionalsFactory {
+class PlayerConditionalFactory {
     abilities() {
         return new AbilityConditionFactory();
     }
@@ -229,6 +229,6 @@ class PlayerConditionalsFactory {
     }
 }
 
-export function player() {
-    return new PlayerConditionalsFactory();
+export default function player() {
+    return new PlayerConditionalFactory();
 }

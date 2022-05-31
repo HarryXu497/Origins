@@ -1,4 +1,4 @@
-class Ingredient {
+export class Ingredient {
     public item: string;
     public tag: string;
 
@@ -35,7 +35,6 @@ export class IngredientFactory {
 }
 
 
-export default Ingredient;
-export function ingredient() {
+export default function ingredient() {
     return new IngredientFactory();
 }

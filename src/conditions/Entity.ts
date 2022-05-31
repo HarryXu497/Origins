@@ -153,6 +153,6 @@ class EntityConditionalsFactory {
     }
 }
 
-export function entity() {
+export default function entity() {
     return new EntityConditionalsFactory();
 }
