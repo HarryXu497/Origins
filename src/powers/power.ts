@@ -1,5 +1,6 @@
 import * as fs from 'fs';
 import { ConditionType } from '../@types/condition/index';
+import { EntityConditionType } from '../@types/condition/entity';
 
 class Power {
     public fileName: string;
@@ -11,7 +12,7 @@ class Power {
     public hidden: boolean;
     public loading_priority: number;
     public badges: string[];
-    public condition: ConditionType;
+    public condition: EntityConditionType;
 
     constructor(namespace: string, fileName: string, name: string, description: string = "") {
         this.namespace = namespace;
@@ -51,12 +52,12 @@ class Power {
         return this;
     }
 
-    setCondition(value: ConditionType) {
+    setCondition(value: EntityConditionType) {
         this.condition = value;
         return this;
     }
 
-    if(value: ConditionType) {
+    if(value: EntityConditionType) {
         return this.setCondition(value)
     }
 
