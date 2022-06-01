@@ -5,7 +5,7 @@ class AddVelocityAction {
     public x: number;
     public y: number;
     public z: number;
-    public space: Space
+    public space: Space;
     public client: boolean;
     public server: boolean;
     public set: boolean
@@ -58,13 +58,14 @@ class AddVelocityActionFactory {
         this.instance = new AddVelocityAction(x, y, z);
     }
 
-    additive() {
-        this.instance.set = false;
+    options(space: Space, override?: boolean) {
+        this.instance.space = space;
+        this.instance.set = override;
         return this.instance;
     }
+}
 
-    override() {
-        this.instance.set = true;
-        return this.instance;
-    }
+
+export default function addVelocity(x: number, y: number, z: number) {
+    return new AddVelocityActionFactory(x, y, z);
 }
