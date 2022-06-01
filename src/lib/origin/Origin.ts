@@ -1,5 +1,5 @@
 import * as fs from 'fs';
-import Power from './powers/power';
+import Power from '../powers/Power';
 
 
 class Origin {
@@ -79,7 +79,7 @@ class Origin {
     }
 
     writeToFile(fileName: string) {
-        fs.writeFile(fileName, JSON.stringify(this, null, 2), (err) => {
+        fs.writeFile(fileName, JSON.stringify(this, null, 4), (err) => {
             if (err) {
                 throw err;
             }

@@ -1,5 +1,5 @@
 import { AirConditionFactory } from "./entity/Air";
-import { BiomeConditionFactory } from "./entity/Biome";
+import { BiomeConditionFactory } from "./Biome";
 import { BrightnessConditionFactory } from './entity/Brightness';
 
 import CollidedHorizontallyCondition from "./entity/CollidedHorizontally";
@@ -28,7 +28,6 @@ import HealthConditionFactory from "./Health";
 import TamedCondition from './entity/Tamed';
 import SubmergedInCondition from "./entity/SubmergedIn";
 import { TimeOfDayConditionFactory } from "./entity/TimeOfDay";
-import { ItemConditionType } from "../@types/condition/item";
 import UsingItemCondition from "./entity/UsingItem";
 
 class EntityConditionalsFactory {

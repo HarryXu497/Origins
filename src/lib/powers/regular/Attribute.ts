@@ -1,4 +1,4 @@
-import Power from '../power.js';
+import Power from '../Power.js';
 import { AttributedAttributeModifier } from '../../@types/datatypes/datatypes';
 
 /*

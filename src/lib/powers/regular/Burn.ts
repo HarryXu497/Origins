@@ -1,4 +1,4 @@
-import Power from '../power';
+import Power from '../Power';
 
 
 /* 

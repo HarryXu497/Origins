@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import { ConditionType } from '../@types/condition/index';
 import { EntityConditionType } from '../@types/condition/entity';
+import { MetaConditionType } from '../@types/condition/meta';
 
 class Power {
     public fileName: string;
@@ -12,7 +13,7 @@ class Power {
     public hidden: boolean;
     public loading_priority: number;
     public badges: string[];
-    public condition: EntityConditionType;
+    public condition: EntityConditionType | MetaConditionType;
 
     constructor(namespace: string, fileName: string, name: string, description: string = "") {
         this.namespace = namespace;
@@ -52,12 +53,12 @@ class Power {
         return this;
     }
 
-    setCondition(value: EntityConditionType) {
+    setCondition(value: EntityConditionType | MetaConditionType) {
         this.condition = value;
         return this;
     }
 
-    if(value: EntityConditionType) {
+    if(value: EntityConditionType | MetaConditionType) {
         return this.setCondition(value)
     }
 
@@ -67,7 +68,7 @@ class Power {
         delete obj.id;
         delete obj.namespace;
 
-        fs.writeFile(this.fileName + ".json", JSON.stringify(obj, null, 2), (err) => {
+        fs.writeFile(this.fileName + ".json", JSON.stringify(obj, null, 4), (err) => {
             if (err) {
                 throw err;
             }

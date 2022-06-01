@@ -2,7 +2,7 @@ import { AbilityConditionFactory } from "./entity/Ability";
 import { AdvancementConditionFactory } from './entity/Advancement';
 import { AirConditionFactory } from "./entity/Air";
 import { AttributeConditionFactory } from './entity/Attribute';
-import { BiomeConditionFactory } from './entity/Biome';
+import { BiomeConditionFactory } from './Biome';
 import BlockCollisionCondition from './entity/BlockCollision';
 import { BrightnessConditionFactory } from "./entity/Brightness";
 import CollidedHorizontallyCondition from './entity/CollidedHorizontally';
@@ -42,9 +42,7 @@ import SubmergedInCondition from './entity/SubmergedIn';
 import SwimmingCondition from "./entity/Swimming";
 import { TimeOfDayConditionFactory } from './entity/TimeOfDay';
 import UsingEffectiveToolCondition from './entity/UsingEffectiveTool';
-import { ItemConditionType } from '../@types/condition/item';
 import UsingItemCondition from './entity/UsingItem';
-import { XPLevelsConditionFactory } from './entity/XPLevels';
 import XPConditonFactory from "./XP";
 
 class PlayerConditionalFactory {

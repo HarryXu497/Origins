@@ -1,4 +1,4 @@
-import Power from '../power.js';
+import Power from '../Power.js';
 
 /*
 * Transfers the value of an attribute modifier from a specified attribute to a specified power class that extends the ValueModifyingPower super-class.

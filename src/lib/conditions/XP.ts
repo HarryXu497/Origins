@@ -1,7 +1,7 @@
 import { XPLevelsConditionFactory } from './entity/XPLevels';
 import { XPPointsConditionFactory } from './entity/XPPoints';
 
-class XPConditonFactory {
+class XPConditionFactory {
     levels() {
         return new XPLevelsConditionFactory()
     }
@@ -11,4 +11,4 @@ class XPConditonFactory {
     }
 }
 
-export default XPConditonFactory
+export default XPConditionFactory
