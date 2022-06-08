@@ -18,7 +18,6 @@ interface AttributeModifierObject {
     description?: string
 }
 
-export default function attributeModifier(attributeModifierObject: AttributeModifierObject) {
-    const { operation, value, description } = attributeModifierObject;
+export default function attributeModifier({ operation, value, description }: AttributeModifierObject) {
     return new AttributeModifier(operation, value, description);
 }

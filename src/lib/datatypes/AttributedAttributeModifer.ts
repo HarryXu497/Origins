@@ -20,7 +20,6 @@ interface AttributedAttributeModifierObject {
     description?: string
 }
 
-export default function attributedAttributeModifier(modifierObject: AttributedAttributeModifierObject) {
-    const { attribute, operation, value, description } = modifierObject;
+export default function attributedAttributeModifier({ attribute, operation, value, description }: AttributedAttributeModifierObject) {
     return new AttributedAttributeModifier(attribute, operation, value, description);
 }

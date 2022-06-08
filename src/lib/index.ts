@@ -1,15 +1,11 @@
 import Conditions from './conditions/Conditions';
+import DataTypes from './datatypes/DataTypes';
+import Origin from './origin/Origin';
 
-class OriginsExtendedClass {
-    public Conditions: Conditions;
-
-    constructor() {
-        this.Conditions = new Conditions();
-    }
+class OriginsExtended {
+    public static readonly Conditions = Conditions;
+    public static readonly DataTypes = DataTypes;
+    public static readonly Origin = Origin
 }
-
-const OriginsExtended = new OriginsExtendedClass();
-
-
 
 export default OriginsExtended;

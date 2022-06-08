@@ -7,6 +7,10 @@ export class ExecuteCommandAction {
     }
 }
 
-export default function executeCommand(commandToExecute: string) {
+interface ExecuteCommandObject {
+    commandToExecute: string;
+}
+
+export default function executeCommand({ commandToExecute }: ExecuteCommandObject) {
     return new ExecuteCommandAction(commandToExecute);
 }

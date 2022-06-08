@@ -7,6 +7,10 @@ export class BonemealAction {
     }
 }
 
-export default function bonemeal(showEffects: boolean = true) {
+interface BonemealObject {
+    showEffects: boolean
+}
+
+export default function bonemeal({ showEffects = true}: BonemealObject ) {
     return new BonemealAction(showEffects);
 }

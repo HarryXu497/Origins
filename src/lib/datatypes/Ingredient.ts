@@ -1,40 +1,22 @@
+import OriginsError from '../error/OriginsError';
 export class Ingredient {
     public item: string;
     public tag: string;
 
-    constructor(item?: string, tag?: string) {
+    constructor(item: string, tag: string) {
         this.item = item;
         this.tag = tag;
     }
-
-    setItem(item: string) {
-        this.item = item;
-    }
-
-    setTag(tag: string) {
-        this.tag = tag;
-    }
 }
 
-export class IngredientFactory {
-    private readonly instance: Ingredient;
-
-    constructor() {
-        this.instance = new Ingredient();
-    }
-
-    withTag(tag: string) {
-        this.instance.tag = tag;
-        return this.instance;
-    }
-
-    withName(name: string) {
-        this.instance.item = name;
-        return this.instance;
-    }
+interface IngredientObject {
+    item?: string;
+    tag?: string;
 }
 
 
-export default function ingredient() {
-    return new IngredientFactory();
+export default function ingredient({ item, tag }: IngredientObject) {
+    if (!item && !tag) throw new OriginsError("either `item` or `tag` must be defined")
+    return new Ingredient(item, tag)
 }
+

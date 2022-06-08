@@ -1,3 +1,4 @@
+import OriginsError from '../../error/OriginsError';
 type Space = 'world' | 'local' | 'local_horizontal' | 'local_horizontal_normalized' | 'velocity' | 'velocity_normalized' | 'velocity_horizontal' | 'velocity_horizontal_normalized'
 
 class AddVelocityAction {
@@ -8,10 +9,14 @@ class AddVelocityAction {
     public space: Space;
     public client: boolean;
     public server: boolean;
-    public set: boolean
+    public set: boolean;
 
-    constructor(x?: number, y?: number, z?: number) {
+    constructor(x: number, y: number, z: number, space: Space, client: boolean, server: boolean, set: boolean) {
         this.setVector(x, y, z);
+        this.space = space;
+        this.client = client;
+        this.server = server;
+        this.set = set;
     }
 
     private setVector(x: number, y: number, z: number) {
@@ -19,53 +24,22 @@ class AddVelocityAction {
         this.y = y;
         this.z = z;
     }
-
-    setX(x: number) {
-        this.x = x;
-        return this;
-    }
-
-    setY(y: number) {
-        this.y = y;
-        return this;
-    }
-
-    setZ(z: number) {
-        this.z = z;
-        return this;
-    }
-
-    setClient(set: boolean) {
-        this.set = set;
-        return this;
-    }
-
-    setServer(set: boolean) {
-        this.set = set;
-        return this;
-    }
-
-    setSet(set: boolean) {
-        this.set = set;
-        return this;
-    }
 }
 
-class AddVelocityActionFactory {
-    private readonly instance: AddVelocityAction;
-
-    constructor(x: number, y: number, z: number) {
-        this.instance = new AddVelocityAction(x, y, z);
-    }
-
-    options(space: Space, override?: boolean) {
-        this.instance.space = space;
-        this.instance.set = override;
-        return this.instance;
-    }
+interface AddVelocityActionObject {
+    vector: { x?: number, y?: number, z?: number }
+    space: Space | 'relative_to_player' | 'global';
+    client?: boolean;
+    server?: boolean;
+    override?: boolean;
 }
 
+export default function addVelocity({ vector, space, client = true, server = true, override = false}: AddVelocityActionObject) {
+    const { x = 0.0, y = 0.0, z = 0.0 } = vector;
 
-export default function addVelocity(x: number, y: number, z: number) {
-    return new AddVelocityActionFactory(x, y, z);
+    let coordinateSpace = space;
+    if (coordinateSpace === 'global') coordinateSpace = 'world';
+    if (coordinateSpace === 'relative_to_player') coordinateSpace = 'local';
+
+    return new AddVelocityAction(x, y, z, coordinateSpace, client, server, override);
 }

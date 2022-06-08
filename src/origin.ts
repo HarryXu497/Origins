@@ -1,6 +1,7 @@
-import Origin from './lib/origin/Origin';
-import Burn from './lib/powers/regular/Burn';
+import OriginsExtended from './lib/index';
 import power from './power';
+
+const Origin = OriginsExtended.Origin;
 
 const origin = new Origin("Sfan")
 

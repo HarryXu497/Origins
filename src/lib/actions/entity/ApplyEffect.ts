@@ -1,5 +1,4 @@
 import { StatusEffectInstance } from './../../@types/datatypes/datatypes.d';
-import statusEffect from '../../datatypes/StatusEffectInstance';
 
 class ApplyEffect {
     effect: StatusEffectInstance;
@@ -14,12 +13,3 @@ class ApplyEffect {
 export default function applyEffect(...effects: StatusEffectInstance[]) {
     return new ApplyEffect(...effects);
 }
-
-applyEffect(
-    statusEffect({
-        effect: "minecraft:speed",
-        duration: 400,
-        is_ambient: true,
-        
-    })
-)
