@@ -14,7 +14,6 @@ interface BadgeObject {
 }
 
 
-export default function badge(badgeObject: BadgeObject) {
-    const { sprite, text } = badgeObject;
+export default function badge({ sprite, text }: BadgeObject) {
     return new Badge(sprite, text);
 }

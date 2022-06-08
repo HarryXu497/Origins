@@ -9,9 +9,6 @@ class Origin {
     public static readonly THROW_ENDER_PEARL = "origins:throw_ender_pearl";
     public static readonly FRESH_AIR = "origins:fresh_air";
 
-
-
-
     public name: string;
     public description: string;
     public powers: string[];

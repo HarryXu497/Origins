@@ -16,7 +16,7 @@ class StatusEffectInstance {
     }
 }
 
-interface StatusEffectObject {
+export interface StatusEffectObject {
     effect: string; 
     duration?: number;
     amplifier?: number;
@@ -26,7 +26,6 @@ interface StatusEffectObject {
 }
 
 
-export default function statusEffect(statusEffectObject: StatusEffectObject) {
-    const { effect, duration, amplifier, is_ambient, show_particles, show_icon } = statusEffectObject;
+export default function statusEffect({ effect, duration, amplifier, is_ambient, show_particles, show_icon }: StatusEffectObject) {
     return new StatusEffectInstance(effect, duration, amplifier, is_ambient, show_particles, show_icon);
 }

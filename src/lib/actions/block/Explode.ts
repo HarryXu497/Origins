@@ -26,7 +26,6 @@ interface ExplodeActionObject {
     create_fire?: boolean;
 }
 
-export default function explodeBlock(explodeActionObject: ExplodeActionObject) {
-    const { power, destruction_type, indestructable, destructable, create_fire } = explodeActionObject;
+export default function explodeBlock({ power, destruction_type, indestructable, destructable, create_fire }: ExplodeActionObject) {
     return new ExplodeAction(power, destruction_type, indestructable, destructable, create_fire);
 }

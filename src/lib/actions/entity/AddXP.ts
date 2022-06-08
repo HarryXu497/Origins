@@ -21,7 +21,14 @@ class AddXPAction {
     }
 }
 
-export default function addXp(levels?: number, points?: number) {
-    return new AddXPAction(levels, points);
+interface AddXPObject {
+    levels?: number;
+    points?: number;
 }
 
+export default function addXp({ levels, points }: AddXPObject) {
+    if (points < 0) throw new OriginsError(
+        "`points` cannot be negative. If you wish to subtract levels, use a negative `levels` value"
+    )
+    return new AddXPAction(levels, points);
+}
