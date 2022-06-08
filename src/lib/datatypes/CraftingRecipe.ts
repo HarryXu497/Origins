@@ -6,7 +6,6 @@ interface Result {
 }
 
 
-
 class CraftingRecipe {
     id: string;
     type: CraftingRecipeType

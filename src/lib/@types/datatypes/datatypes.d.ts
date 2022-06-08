@@ -1,6 +1,7 @@
 import { EntityConditionType } from "../condition/entity";
 
 // Types
+export type DestructionType = 'break' | 'destroy' | 'none';
 export type ModifierOperation = 'addition' | 'multiply_base' | 'multiply_total';
 export type Comparison = '<' | '<=' | '>' | '>=' | '==' | '!=';
 export type MultipleIngredients = SingularIngredient[];

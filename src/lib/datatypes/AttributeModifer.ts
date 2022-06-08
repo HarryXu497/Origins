@@ -10,9 +10,15 @@ export class AttributeModifier {
         this.value = value;
         this.name = description;
     }
-
 }
 
-export default function attributeModifier(operation: ModifierOperation, value: number, description?: string) {
+interface AttributeModifierObject {
+    operation: ModifierOperation;
+    value: number;
+    description?: string
+}
+
+export default function attributeModifier(attributeModifierObject: AttributeModifierObject) {
+    const { operation, value, description } = attributeModifierObject;
     return new AttributeModifier(operation, value, description);
 }

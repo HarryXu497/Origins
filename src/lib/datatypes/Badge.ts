@@ -8,7 +8,13 @@ class Badge {
     }
 }
 
+interface BadgeObject {
+    sprite: string;
+    text: string
+}
 
-export default function badge(sprite: string, text: string) {
+
+export default function badge(badgeObject: BadgeObject) {
+    const { sprite, text } = badgeObject;
     return new Badge(sprite, text);
 }

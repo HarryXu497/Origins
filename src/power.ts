@@ -13,6 +13,7 @@ power
             player().air().isEqualTo(100),
             player().brightness().isEqualTo(100),
             biome().is("sfan")
+            
         )
     )
 

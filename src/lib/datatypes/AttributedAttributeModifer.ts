@@ -13,6 +13,14 @@ class AttributedAttributeModifier extends AttributeModifier {
     }
 }
 
-export default function attributedAttributeModifier(attribute: string, operation: ModifierOperation, value: number, description?: string) {
+interface AttributedAttributeModifierObject {
+    attribute: string;
+    operation: ModifierOperation;
+    value: number;
+    description?: string
+}
+
+export default function attributedAttributeModifier(modifierObject: AttributedAttributeModifierObject) {
+    const { attribute, operation, value, description } = modifierObject;
     return new AttributedAttributeModifier(attribute, operation, value, description);
 }

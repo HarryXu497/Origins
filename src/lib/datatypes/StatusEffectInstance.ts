@@ -16,7 +16,17 @@ class StatusEffectInstance {
     }
 }
 
+interface StatusEffectObject {
+    effect: string; 
+    duration?: number;
+    amplifier?: number;
+    is_ambient?: boolean;
+    show_particles?: boolean;
+    show_icon?: boolean;
+}
 
-export default function statusEffect(effect: string, duration?: number, amplifier?: number, is_ambient?: boolean, show_particles?: boolean, show_icon?: boolean) {
+
+export default function statusEffect(statusEffectObject: StatusEffectObject) {
+    const { effect, duration, amplifier, is_ambient, show_particles, show_icon } = statusEffectObject;
     return new StatusEffectInstance(effect, duration, amplifier, is_ambient, show_particles, show_icon);
 }
