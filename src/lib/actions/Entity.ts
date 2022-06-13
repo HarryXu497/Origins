@@ -1,14 +1,9 @@
 import addVelocity from "./entity/AddVelocity";
 import addXp from "./entity/AddXP";
 
-class EntityAction {
-    addVelocity(x: number, y: number, z: number) {
-        return addVelocity(x, y, z)
-    }
-
-    addXp(levels: number, points: number) {
-        return addXp(levels, points)
-    }
+class EntityActions {
+    public static readonly addVelocity = addVelocity;
+    public static readonly addXp = addXp;
 }
 
-export default EntityAction;
+export default EntityActions;
