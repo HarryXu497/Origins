@@ -2,12 +2,12 @@ type OperationType = 'add' | 'set';
 
 export class ModifyBlockStateAction {
     public readonly type = 'origins:modify_block_state';
-    public property: string;
-    public operation: OperationType;
-    public change: number;
-    public value: boolean;
-    public enum: string;
-    public cycle: boolean;
+    private property: string;
+    private operation: OperationType;
+    private change: number;
+    private value: boolean;
+    private enum: string;
+    private cycle: boolean;
 
     constructor(property: string, operation: OperationType = 'add', change?: number, value?: boolean, _enum?: string, cycle: boolean = false) {
         this.property = property;
@@ -26,26 +26,37 @@ export class ModifyBlockStateAction {
 interface ModifyBlockStateObject {
     property: string;
     operation: OperationType; 
-    newValue?: number | boolean | string;
+    value?: number | boolean | string;
     cycle?: boolean;
 }
 
-export default function modifyBlockState({ property, operation, newValue, cycle = false }: ModifyBlockStateObject) {
+/**
+ * 
+ * @description Modifies the block state property of the block. Depending on the property type,
+ *              different values are expected: value can be either a string, number, or boolean.
+ * @param {string} property - The name of the property that will be modified. Examples are facing or age. See {@link https://minecraft.fandom.com/wiki/Block_states#List_of_block_states Minecraft Fandom Wiki: Block States (List of block states)} for possible values.
+ * @param {OperationType} [operation="add"] - Determines how the value specified in the change field is operated on the specified property. Accepts "add" or "set". "add" only applies to numerical `value`.
+ * @param {number | boolean | string} [value] - The new value to be "set" or "add" (Only for numerical values).
+ * @param {boolean} [cycle=false] - If set to true, changes the property to the next state in the cycle, ignoring all other optional fields. All property types can use this operation.
+ * @returns The formatted object representing the block action.
+ * @link {@link https://origins.readthedocs.io/en/latest/types/block_action_types/modify_block_state/ External Documentation}.
+ */
+export default function modifyBlockState({ property, operation, value, cycle = false }: ModifyBlockStateObject) {
     let change: number;
-    let value: boolean;
+    let _value: boolean;
     let _enum: string;
 
-    if (typeof newValue === 'number') {
-        change = newValue;
+    if (typeof value === 'number') {
+        change = value;
     }
 
-    if (typeof newValue === 'boolean') {
-        value = newValue;
+    if (typeof value === 'boolean') {
+        _value = value;
     }
 
-    if (typeof newValue === 'string') {
-        _enum = newValue;
+    if (typeof value === 'string') {
+        _enum = value;
     }
 
-    return new ModifyBlockStateAction(property, operation, change, value, _enum, cycle);
+    return new ModifyBlockStateAction(property, operation, change, _value, _enum, cycle);
 }

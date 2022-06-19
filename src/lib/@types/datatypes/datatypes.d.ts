@@ -1,7 +1,15 @@
 import { EntityConditionType } from "../condition/entity";
 
 // Types
+/**
+ * The type of destruction an explosion has on its environment
+ *  - break: The explosion will destroy the blocks and drop the loot of the block(s).
+ *  - destroy: The explosion will only destroy the blocks.
+ *  - none: The explosion will **not** destroy the blocks **nor** drop the loot of the block(s).
+ */
 export type DestructionType = 'break' | 'destroy' | 'none';
+
+
 export type ModifierOperation = 'addition' | 'multiply_base' | 'multiply_total';
 export type Comparison = '<' | '<=' | '>' | '>=' | '==' | '!=';
 export type MultipleIngredients = SingularIngredient[];

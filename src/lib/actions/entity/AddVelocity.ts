@@ -1,15 +1,14 @@
-import OriginsError from '../../error/OriginsError';
 type Space = 'world' | 'local' | 'local_horizontal' | 'local_horizontal_normalized' | 'velocity' | 'velocity_normalized' | 'velocity_horizontal' | 'velocity_horizontal_normalized'
 
 class AddVelocityAction {
     public readonly type = 'origins:add_velocity';
-    public x: number;
-    public y: number;
-    public z: number;
-    public space: Space;
-    public client: boolean;
-    public server: boolean;
-    public set: boolean;
+    private x: number;
+    private y: number;
+    private z: number;
+    private space: Space;
+    private client: boolean;
+    private server: boolean;
+    private set: boolean;
 
     constructor(x: number, y: number, z: number, space: Space, client: boolean, server: boolean, set: boolean) {
         this.setVector(x, y, z);
@@ -26,14 +25,27 @@ class AddVelocityAction {
     }
 }
 
+type ModifiedSpace = Space | 'relative_to_player' | 'global';
 interface AddVelocityActionObject {
     vector: { x?: number, y?: number, z?: number }
-    space: Space | 'relative_to_player' | 'global';
+    space: ModifiedSpace;
     client?: boolean;
     server?: boolean;
     override?: boolean;
 }
 
+/**
+ * @description Adds or sets velocity towards a specific direction.
+ * @param {Object} vector - The velocity vector to apply to the entity.
+ * @param {Object} [vector.x=0.0]- The amount of velocity to add on the x-axis.
+ * @param {Object} [vector.y=0.0] - The amount of velocity to add on the y-axis.
+ * @param {Object} [vector.z=0.0] - The amount of velocity to add on the z-axis.
+ * @param {ModifiedSpace} [space="world"] - The {@link ModifiedSpace Space} to perform the velocity addition in.
+ * @param {boolean} [client=true] - If this is false, the action will not execute on the client.
+ * @param {boolean} [server=true] - If this is false, the action will not execute on the server.
+ * @param {boolean} [set=true] - If this is true, the action will act as a "set" velocity action, overriding the entity's current velocity instead of adding to it.
+ * @returns The formatted object representing the entity action.
+ */
 export default function addVelocity({ vector, space, client = true, server = true, override = false}: AddVelocityActionObject) {
     const { x = 0.0, y = 0.0, z = 0.0 } = vector;
 
