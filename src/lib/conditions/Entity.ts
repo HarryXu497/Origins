@@ -29,6 +29,7 @@ import TamedCondition from './entity/Tamed';
 import SubmergedInCondition from "./entity/SubmergedIn";
 import { TimeOfDayConditionFactory } from "./entity/TimeOfDay";
 import UsingItemCondition from "./entity/UsingItem";
+import { EquipmentSlot } from "../@types/datatypes/datatypes";
 
 class EntityConditionalsFactory {
     air() {
@@ -71,7 +72,7 @@ class EntityConditionalsFactory {
         return new EntityGroupConditionFactory();
     }
 
-    equippedItem(slot: 'mainhand' | 'offhand' | 'head' | 'chest' | 'legs' | 'feet') {
+    equippedItem(slot: EquipmentSlot) {
         return new EquippedItemCondition(slot);
     }
 

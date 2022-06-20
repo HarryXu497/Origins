@@ -1,4 +1,4 @@
-class DamageSource {
+export class DamageSource {
     private name: string;
     private bypasses_armor: boolean;
     private fire: boolean;
@@ -6,7 +6,7 @@ class DamageSource {
     private magic: boolean;
     private out_of_world: boolean;
 
-    constructor(name: string, bypassesArmor: boolean = false, fire: boolean = false, unblockable: boolean = false, magic: boolean = false, outOfWorld: boolean = false) {
+    constructor(name: string, bypassesArmor: boolean, fire: boolean, unblockable: boolean, magic: boolean, outOfWorld: boolean) {
         this.name = name;
         this.bypasses_armor = bypassesArmor;
         this.fire = fire; 
@@ -36,7 +36,7 @@ interface DamageSourceObject {
  * @returns An object representing the damage source data type.
  * @link {@link https://origins.readthedocs.io/en/latest/types/data_types/damage_source/ External Documentation}.
  */
-export default function damageSource({ name, bypassesArmor, fire, unblockable, magic, outOfWorld }: DamageSourceObject) {
+export default function damageSource({ name, bypassesArmor = false, fire = false, unblockable = false, magic = false, outOfWorld = false }: DamageSourceObject) {
     return new DamageSource(name, bypassesArmor, fire, unblockable, magic, outOfWorld);
 }
 

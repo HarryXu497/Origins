@@ -1,6 +1,6 @@
 import { BlockActionTypes } from '../../@types/action/block';
 
-class BlockActionAtAction {
+export class BlockActionAtAction {
     public readonly type = 'origins:block_action_at';
     private block_action: BlockActionTypes;
 

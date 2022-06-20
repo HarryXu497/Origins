@@ -5,6 +5,7 @@
         "ts-node": "^10.8.0"
     },
     "scripts": {
-        "run": "node --experimental-specifier-resolution=node --loader ts-node/esm ./src/index.ts"
+        "dev": "node --experimental-specifier-resolution=node --loader ts-node/esm ./src/index.ts",
+        "build": "tsc && node out/index.js"
     }
 }

@@ -1,5 +1,5 @@
 import { StatusEffectInstance } from './../../@types/datatypes/datatypes.d';
-class ApplyEffectAction {
+export class ApplyEffectAction {
     private effect: StatusEffectInstance;
     private effects: StatusEffectInstance[];
 

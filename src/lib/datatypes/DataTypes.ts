@@ -1,8 +1,11 @@
-import { ModifierOperation } from "../@types/datatypes/datatypes";
+
 import attributeModifier from './AttributeModifer';
 import attributedAttributeModifier from './AttributedAttributeModifer';
 import badge from "./Badge";
-import statusEffect, { StatusEffectObject } from './StatusEffectInstance';
+import statusEffect from './StatusEffectInstance';
+import damageSource from './DamageSource';
+import ingredient from './Ingredient';
+
 
 
 export default class DataTypes {
@@ -10,4 +13,6 @@ export default class DataTypes {
     public static readonly attributedAttributeModifier = attributedAttributeModifier;
     public static readonly badge = badge;
     public static readonly statusEffect = statusEffect;
+    public static readonly damageSource = damageSource;
+    public static readonly ingredient = ingredient;
 }

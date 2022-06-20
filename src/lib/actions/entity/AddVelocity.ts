@@ -1,6 +1,6 @@
 type Space = 'world' | 'local' | 'local_horizontal' | 'local_horizontal_normalized' | 'velocity' | 'velocity_normalized' | 'velocity_horizontal' | 'velocity_horizontal_normalized'
 
-class AddVelocityAction {
+export class AddVelocityAction {
     public readonly type = 'origins:add_velocity';
     private x: number;
     private y: number;
@@ -45,6 +45,7 @@ interface AddVelocityActionObject {
  * @param {boolean} [server=true] - If this is false, the action will not execute on the server.
  * @param {boolean} [set=true] - If this is true, the action will act as a "set" velocity action, overriding the entity's current velocity instead of adding to it.
  * @returns The formatted object representing the entity action.
+ * @link {@link https://origins.readthedocs.io/en/latest/types/entity_action_types/add_velocity/ External Documentation}.
  */
 export default function addVelocity({ vector, space, client = true, server = true, override = false}: AddVelocityActionObject) {
     const { x = 0.0, y = 0.0, z = 0.0 } = vector;

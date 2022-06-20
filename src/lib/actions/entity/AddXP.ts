@@ -1,5 +1,5 @@
 import OriginsError from '../../error/OriginsError';
-class AddXPAction {
+export class AddXPAction {
     public readonly type  = 'origins:add_xp'
     private levels: number;
     private points: number;

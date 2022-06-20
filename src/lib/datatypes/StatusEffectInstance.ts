@@ -16,7 +16,7 @@ class StatusEffectInstance {
     }
 }
 
-export interface StatusEffectObject {
+interface StatusEffectObject {
     effect: string; 
     duration?: number;
     amplifier?: number;
