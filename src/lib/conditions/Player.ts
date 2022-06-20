@@ -44,6 +44,7 @@ import { TimeOfDayConditionFactory } from './entity/TimeOfDay';
 import UsingEffectiveToolCondition from './entity/UsingEffectiveTool';
 import UsingItemCondition from './entity/UsingItem';
 import XPConditonFactory from "./XP";
+import { EquipmentSlot } from "../@types/datatypes/datatypes";
 
 class PlayerConditionalFactory {
     abilities() {
@@ -114,7 +115,7 @@ class PlayerConditionalFactory {
         return new EntityTypeConditionFactory();
     }
 
-    equippedItem(slot: 'mainhand' | 'offhand' | 'head' | 'chest' | 'legs' | 'feet') {
+    equippedItem(slot: EquipmentSlot) {
         return new EquippedItemCondition(slot);
     }
 

@@ -1,3 +1,4 @@
+import OriginsExtended from './lib/index';
 import origin from './origin';
 import power from './power';
 

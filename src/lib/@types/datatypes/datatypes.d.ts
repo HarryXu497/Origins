@@ -9,6 +9,7 @@ import { EntityConditionType } from "../condition/entity";
  */
 export type DestructionType = 'break' | 'destroy' | 'none';
 
+export type EquipmentSlot = 'mainhand' | 'offhand' | 'head' | 'chest' | 'legs' | 'feet'
 
 export type ModifierOperation = 'addition' | 'multiply_base' | 'multiply_total';
 export type Comparison = '<' | '<=' | '>' | '>=' | '==' | '!=';
