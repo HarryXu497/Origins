@@ -1,7 +1,7 @@
 type OperationType = 'add' | 'set';
 
 export class ModifyBlockStateAction {
-    public readonly type = 'origins:modify_block_state';
+    private readonly type = 'origins:modify_block_state';
     private property: string;
     private operation: OperationType;
     private change: number;

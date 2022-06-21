@@ -2,7 +2,7 @@ import { Comparison } from '../../@types/datatypes/datatypes';
 import Condition from '../Condition';
 
 class RelativeHealthCondition extends Condition {
-    public readonly type = 'origins:relative_health';
+    private readonly type = 'origins:relative_health';
     public comparison: Comparison;
     public compare_to: number;
 

@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class NameCondition extends Condition {
-    public readonly type = 'origins:name';
+    private readonly type = 'origins:name';
 
     public name: string;
 

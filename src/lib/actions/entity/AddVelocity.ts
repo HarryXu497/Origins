@@ -1,7 +1,7 @@
 type Space = 'world' | 'local' | 'local_horizontal' | 'local_horizontal_normalized' | 'velocity' | 'velocity_normalized' | 'velocity_horizontal' | 'velocity_horizontal_normalized'
 
 export class AddVelocityAction {
-    public readonly type = 'origins:add_velocity';
+    private readonly type = 'origins:add_velocity';
     private x: number;
     private y: number;
     private z: number;

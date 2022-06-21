@@ -1,5 +1,5 @@
 export class ExecuteCommandAction {
-    public readonly type = 'origins:execute_command';
+    private readonly type = 'origins:execute_command';
     private command: string;
 
     constructor(commandToExecute: string) {

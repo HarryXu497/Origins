@@ -1,5 +1,5 @@
 export class ConsumeAction {
-    public readonly type = 'origins:consume';
+    private readonly type = 'origins:consume';
     private amount: number;
 
     constructor(amount: number) {

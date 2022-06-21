@@ -2,7 +2,7 @@ import { Comparison } from '../../@types/datatypes/datatypes';
 import Condition from '../Condition';
 
 class CommandCondition extends Condition {
-    public readonly type = 'origins:command';
+    private readonly type = 'origins:command';
     public command: string;
     public comparison: Comparison;
     public compare_to: number;

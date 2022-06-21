@@ -1,7 +1,7 @@
 import { EntityConditionType } from "../../@types/condition/entity";
 
 class AttackerCondition {
-    public readonly type = 'origins:attacker'
+    private readonly type = 'origins:attacker'
     public entity_condition: EntityConditionType;
 
     constructor() {

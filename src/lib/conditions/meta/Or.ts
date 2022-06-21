@@ -2,7 +2,7 @@ import { ConditionType } from '../../@types/condition/index';
 import Condition from '../Condition';
 
 export class OrCondition extends Condition {
-    public readonly type = 'origins:or';
+    private readonly type = 'origins:or';
 
     public conditions: ConditionType[];
 

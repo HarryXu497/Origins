@@ -6,7 +6,7 @@ import Power from '../Power';
 * Type ID: origins:burn
 */
 class Burn extends Power {
-    public readonly type = "origins:burn";
+    private readonly type = "origins:burn";
     public interval: number;
     public burn_duration: number;
 

@@ -1,5 +1,5 @@
 class BlockCondition {
-    public readonly type = 'origins:block';
+    private readonly type = 'origins:block';
     public block: string;
 
     constructor(block?: string) {

@@ -1,5 +1,5 @@
 export class CraftingTableAction {
-    public readonly type = 'origins:crafting_table';
+    private readonly type = 'origins:crafting_table';
 }
 
 /**

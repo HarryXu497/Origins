@@ -2,7 +2,7 @@ import { Comparison } from '../../@types/datatypes/datatypes';
 import Condition from '../Condition';
 
 class BlastResistanceCondition extends Condition {
-    public readonly type = 'origins:blast_resistance';
+    private readonly type = 'origins:blast_resistance';
     public comparison: Comparison;
     public compare_to: number;
 

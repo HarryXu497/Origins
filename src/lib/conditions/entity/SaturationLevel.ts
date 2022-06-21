@@ -2,7 +2,7 @@ import { Comparison } from '../../@types/datatypes/datatypes';
 import Condition from '../Condition';
 
 class SaturationLevelCondition extends Condition {
-    public readonly type = 'origins:saturation_level';
+    private readonly type = 'origins:saturation_level';
     public comparison: Comparison;
     public compare_to: number;
 

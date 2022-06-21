@@ -1,7 +1,7 @@
 import { ItemConditionType } from '../../@types/condition/item';
 
 class UsingItemCondition {
-    public readonly type = 'origins:using_item'
+    private readonly type = 'origins:using_item'
 
     public item_condition: ItemConditionType
 

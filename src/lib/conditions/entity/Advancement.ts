@@ -1,6 +1,6 @@
 import Condition from "../Condition";
 class AdvancementCondition extends Condition {
-    public readonly type = 'origins:advancement';
+    private readonly type = 'origins:advancement';
     public advancement: string;
 
     constructor(advancement: string = "") {

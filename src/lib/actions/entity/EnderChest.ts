@@ -1,5 +1,5 @@
 export class EnderChestAction {
-    public readonly type = 'origins:ender_chets';
+    private readonly type = 'origins:ender_chets';
 }
 
 /**

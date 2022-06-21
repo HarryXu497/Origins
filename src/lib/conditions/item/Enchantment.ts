@@ -2,7 +2,7 @@ import { Comparison } from "../../@types/datatypes/datatypes";
 import Condition from "../Condition";
 
 class EnchantmentCondition extends Condition {
-    public readonly type = 'origins:enchantment';
+    private readonly type = 'origins:enchantment';
     public enchantment: string;
     public comparison: Comparison;
     public compare_to: number;

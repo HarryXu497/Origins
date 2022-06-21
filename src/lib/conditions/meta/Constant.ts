@@ -1,5 +1,5 @@
 export class ConstantCondition {
-    public readonly type = 'origins:constant';
+    private readonly type = 'origins:constant';
     public value: boolean;
 
     constructor(value?: boolean) {

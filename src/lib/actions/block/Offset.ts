@@ -1,7 +1,7 @@
 import { BlockActionTypes } from './../../@types/action/block.d';
 
 export class OffsetAction {
-    public readonly type = 'origins:offset';
+    private readonly type = 'origins:offset';
     private action: BlockActionTypes;
     private x: number;
     private y: number;

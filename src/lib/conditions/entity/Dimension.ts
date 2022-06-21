@@ -1,6 +1,6 @@
 import Condition from '../Condition';
 class DimensionCondition extends Condition {
-    public readonly type = 'origins:dimension';
+    private readonly type = 'origins:dimension';
     public dimension: string;
 
     constructor(dimension?: string) {

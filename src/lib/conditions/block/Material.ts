@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class MaterialCondition extends Condition {
-    public readonly type = 'origins:material'
+    private readonly type = 'origins:material'
     public material: string;
     public materials: string[];
 

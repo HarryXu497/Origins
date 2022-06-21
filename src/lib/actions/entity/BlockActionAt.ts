@@ -1,7 +1,7 @@
 import { BlockActionTypes } from '../../@types/action/block';
 
 export class BlockActionAtAction {
-    public readonly type = 'origins:block_action_at';
+    private readonly type = 'origins:block_action_at';
     private block_action: BlockActionTypes;
 
     constructor(blockAction: BlockActionTypes) {

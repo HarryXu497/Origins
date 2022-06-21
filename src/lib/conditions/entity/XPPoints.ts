@@ -2,7 +2,7 @@ import { Comparison } from '../../@types/datatypes/datatypes';
 import Condition from '../Condition';
 
 class XPPointsCondition extends Condition {
-    public readonly type = 'origins:xp_levels';
+    private readonly type = 'origins:xp_levels';
     public comparison: Comparison;
     public compare_to: number;
 

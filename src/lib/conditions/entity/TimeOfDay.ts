@@ -2,7 +2,7 @@ import { Comparison } from '../../@types/datatypes/datatypes';
 import Condition from '../Condition';
 
 class TimeOfDayCondition extends Condition {
-    public readonly type = 'origins:time_of_day';
+    private readonly type = 'origins:time_of_day';
     public comparison: Comparison;
     public compare_to: number;
 

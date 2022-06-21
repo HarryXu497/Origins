@@ -1,7 +1,7 @@
 import { DamageSource } from '../../datatypes/DamageSource';
 
 export class DamageAction {
-    public readonly type = 'origins:damage';
+    private readonly type = 'origins:damage';
     private amount: number;
     private source: DamageSource;
 

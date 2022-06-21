@@ -1,5 +1,5 @@
 export class DamageAction {
-    public readonly type = 'origins:damage';
+    private readonly type = 'origins:damage';
     private amount: number;
     private ignore_unbreaking: boolean;
 

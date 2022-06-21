@@ -1,5 +1,5 @@
 export class SetBlockAction {
-    public readonly type = 'origins:set_block';
+    private readonly type = 'origins:set_block';
     private block: string;
 
     constructor(block: string) {

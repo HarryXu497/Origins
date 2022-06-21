@@ -2,7 +2,7 @@ import { Comparison } from '../../@types/datatypes/datatypes';
 import Condition from '../Condition';
 
 class FallDistanceCondition extends Condition {
-    public readonly type = 'origins:fall_distance';
+    private readonly type = 'origins:fall_distance';
     public comparison: Comparison;
     public compare_to: number;
 

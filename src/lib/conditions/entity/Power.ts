@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class PowerCondition extends Condition {
-    public readonly type = 'origins:power';
+    private readonly type = 'origins:power';
 
     public power: string;
     public source: string;
