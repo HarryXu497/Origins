@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class SubmergedInCondition extends Condition {
-    public readonly type = 'origins_submerged_in';
+    private readonly type = 'origins_submerged_in';
 
     public fluid: string;
 

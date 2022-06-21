@@ -3,7 +3,7 @@ import { EquipmentSlot } from "../../@types/datatypes/datatypes";
 import Condition from "../Condition";
 
 class EquippedItemCondition extends Condition {
-    public readonly type = 'origins:equipped_item'
+    private readonly type = 'origins:equipped_item'
 
     public equipment_slot: EquipmentSlot;
     public item_condition: ItemConditionType;

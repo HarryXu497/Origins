@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class ProjectileCondition extends Condition {
-    public readonly type = 'origins:projectile';
+    private readonly type = 'origins:projectile';
 
     public projectile: string;
 

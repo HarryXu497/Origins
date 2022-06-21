@@ -1,5 +1,5 @@
 export class DismountAction {
-    public readonly type = 'origins:dismount'
+    private readonly type = 'origins:dismount'
 }
 
 /**

@@ -2,7 +2,7 @@ import { FluidConditionType } from '../../@types/condition/fluid';
 
 
 class FluidCondition {
-    public readonly type = 'origins:fluid';
+    private readonly type = 'origins:fluid';
     public fluid_condition: FluidConditionType;
 
     constructor(condition?: FluidConditionType) {

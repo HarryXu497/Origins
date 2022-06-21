@@ -3,7 +3,7 @@ import { Comparison } from '../../@types/datatypes/datatypes';
 import Condition from '../Condition';
 
 class AdjacentCondition extends Condition {
-    public readonly type = 'origins:adjacent';
+    private readonly type = 'origins:adjacent';
     public adjacent_condition: BlockConditionType;
     public comparison: Comparison;
     public compare_to: number;

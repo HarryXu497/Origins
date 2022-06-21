@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class EntityTypeCondition extends Condition {
-    public readonly type = 'origins:entity_group';
+    private readonly type = 'origins:entity_group';
     public entity_type: string
 
     constructor(entityType?: string) {

@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class BlockCollisionCondition extends Condition {
-    public readonly type = 'origins:block_collision';
+    private readonly type = 'origins:block_collision';
     public offset_x: number;
     public offset_y: number;
     public offset_z: number;

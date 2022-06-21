@@ -9,6 +9,11 @@ import entity from '../conditions/Entity';
 import dismount from './entity/Dismount';
 import emitGameEvent from './entity/EmitGameEvent';
 import showEnderChest from './entity/EnderChest';
+import equippedItem from './entity/EquippedItem';
+import executeCommand from './entity/ExecuteCommand';
+import exhaust from './entity/Exhaust';
+import explode from "./entity/Explode";
+import extinguish from './entity/Extinguish';
 
 class EntityActions {
     public static readonly addVelocity = addVelocity;
@@ -22,6 +27,11 @@ class EntityActions {
     public static readonly dismount = dismount;
     public static readonly emitGameEvent = emitGameEvent;
     public static readonly showEnderChest = showEnderChest;
+    public static readonly equippedItem = equippedItem;
+    public static readonly executeCommand = executeCommand;
+    public static readonly exhaust = exhaust;
+    public static readonly explode = explode;
+    public static readonly extinguish = extinguish;
 }
 
 export default EntityActions;

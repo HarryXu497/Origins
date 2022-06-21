@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class CategoryCondition extends Condition{
-    public readonly type = 'origins:category';
+    private readonly type = 'origins:category';
     public category: string;
 
     constructor(category: string) {

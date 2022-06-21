@@ -2,7 +2,7 @@ import { BlockConditionType } from '../../@types/condition/block';
 import Condition from '../Condition';
 
 class OnBlockCondition extends Condition {
-    public readonly type = 'origins:on_block';
+    private readonly type = 'origins:on_block';
     public block_condition: BlockConditionType
 
     constructor(condition?: BlockConditionType) {

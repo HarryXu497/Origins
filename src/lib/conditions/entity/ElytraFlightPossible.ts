@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class ElytraFlightPossibleCondition extends Condition {
-    public readonly type = 'origins:elytra_flight_possible';
+    private readonly type = 'origins:elytra_flight_possible';
     public check_state: boolean;
     public check_abilities: boolean;
 

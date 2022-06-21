@@ -1,5 +1,5 @@
 export class BonemealAction {
-    public readonly type = 'origins:bonemeal';
+    private readonly type = 'origins:bonemeal';
     private effects: boolean;
 
     constructor(showEffect: boolean) {

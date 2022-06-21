@@ -2,7 +2,7 @@ import { Comparison } from '../../@types/datatypes/datatypes';
 import Condition from '../Condition';
 
 class FoodLevelCondition extends Condition {
-    public readonly type = 'origins:food_level';
+    private readonly type = 'origins:food_level';
     public comparison: Comparison;
     public compare_to: number;
 

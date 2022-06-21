@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class InTagCondition extends Condition {
-    public readonly type = 'origins:in_tag';
+    private readonly type = 'origins:in_tag';
     public tag: string;
 
     constructor(tag?: string) {

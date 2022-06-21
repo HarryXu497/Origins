@@ -1,7 +1,7 @@
 import { Comparison } from '../../@types/datatypes/datatypes';
 import Condition from '../Condition';
 class BrightnessCondition extends Condition {
-    public readonly type = 'origins:brightness';
+    private readonly type = 'origins:brightness';
     public comparison: Comparison;
     public compare_to: number;
 

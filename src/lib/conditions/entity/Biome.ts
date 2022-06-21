@@ -2,7 +2,7 @@ import { BiomeConditionTypes } from "../../@types/condition/biomes";
 import Condition from "../Condition";
 
 class BiomeCondition extends Condition {
-    public readonly type = 'origins:biome';
+    private readonly type = 'origins:biome';
     public biome?: string;
     public biomes?: string[];
     public condition?: BiomeConditionTypes;

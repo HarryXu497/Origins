@@ -1,5 +1,5 @@
 export class EmitGameEventAction {
-    public readonly type = 'origins:emit_game_event';
+    private readonly type = 'origins:emit_game_event';
     private event: string;
 
     constructor(event: string) {

@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class OriginCondition extends Condition {
-    public readonly type = 'origins:origin';
+    private readonly type = 'origins:origin';
 
     public origin: string;
     public layer: string;

@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class PrecipitationCondition extends Condition {
-    public readonly type = 'origins:precipitation';
+    private readonly type = 'origins:precipitation';
     public precipitation: 'none' | 'rain' | 'snow';
 
     constructor(precipitation: 'none' | 'rain' | 'snow') {

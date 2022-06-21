@@ -2,7 +2,7 @@ import { Ingredient } from "../../@types/datatypes/datatypes";
 import Condition from "../Condition";
 
 class IngredientCondition extends Condition {
-    public readonly type = 'origins:ingredient';
+    private readonly type = 'origins:ingredient';
     public ingredient: Ingredient | Ingredient[];
 
     constructor(ingredient?: Ingredient | Ingredient[]) {

@@ -1,5 +1,5 @@
 export class ModifyAction {
-    public readonly type = 'origins:modify';
+    private readonly type = 'origins:modify';
     private modifier: string;
 
     constructor(modifier: string) {

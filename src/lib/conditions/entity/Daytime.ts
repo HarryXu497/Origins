@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class DaytimeCondition extends Condition {
-    public readonly type = 'origins:daytime';
+    private readonly type = 'origins:daytime';
 }
 
 export default DaytimeCondition;

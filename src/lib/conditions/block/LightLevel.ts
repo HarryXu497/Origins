@@ -2,7 +2,7 @@ import { Comparison } from '../../@types/datatypes/datatypes';
 import Condition from '../Condition';
 
 class LightLevelCondition extends Condition {
-    public readonly type = 'origins:light_level';
+    private readonly type = 'origins:light_level';
     public light_type: 'sky' | 'block';
     public comparison: Comparison;
     public compare_to: number;

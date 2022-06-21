@@ -3,7 +3,7 @@ import Condition from "../Condition";
 type EntityGroup = 'default' | 'undead' | 'arthropod' | 'illager' | 'aquatic';
 
 class EntityGroupCondition extends Condition {
-    public readonly type = 'origins:entity_group';
+    private readonly type = 'origins:entity_group';
     public group: EntityGroup = 'default';
 
     constructor(group?: EntityGroup) {

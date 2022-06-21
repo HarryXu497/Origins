@@ -5,7 +5,7 @@ import Power from '../Power.js';
 * Type ID: origins:attribute_modify_transfer 
 */
 class AttributeModifyTransfer extends Power {
-    public readonly type = 'origins:attribute_modify_transfer';
+    private readonly type = 'origins:attribute_modify_transfer';
     public class: string;
     public attribute: string;
     public multiplier: number;

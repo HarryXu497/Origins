@@ -1,5 +1,5 @@
 export class ClearEffectAction {
-    public readonly type = 'origins:clear_effect';
+    private readonly type = 'origins:clear_effect';
     private effect: string;
 
     constructor(effect?: string) {

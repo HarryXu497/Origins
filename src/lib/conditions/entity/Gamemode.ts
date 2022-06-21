@@ -1,7 +1,7 @@
 import Condition from "../Condition";
 
 class GamemodeCondition extends Condition {
-    public readonly type = 'origins:gamemode';
+    private readonly type = 'origins:gamemode';
     public gamemode: 'creative' | 'adventure' | 'survival' | 'adventure' | string;
 
     constructor(gamemode?: 'creative' | 'adventure' | 'survival' | 'adventure' | string) {
