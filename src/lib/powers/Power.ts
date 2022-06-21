@@ -4,10 +4,10 @@ import { EntityConditionType } from '../@types/condition/entity';
 import { MetaConditionType } from '../@types/condition/meta';
 
 class Power {
+    public type: string;
     public fileName: string;
     public namespace: string;
     public id: string;
-    public type: string;
     public name: string;
     public description: string;
     public hidden: boolean;
@@ -21,11 +21,6 @@ class Power {
         this.id = `${namespace}:${fileName}`
         this.name = name;
         this.description = description;
-    }
-
-    setType(type: string) {
-        this.type = type;
-        return this;
     }
 
     setName(name: string) {
