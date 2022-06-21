@@ -14,6 +14,9 @@ import executeCommand from './entity/ExecuteCommand';
 import exhaust from './entity/Exhaust';
 import explode from "./entity/Explode";
 import extinguish from './entity/Extinguish';
+import feed from "./entity/Feed";
+import gainAir from './entity/GainAir';
+import give from "./entity/Give";
 
 class EntityActions {
     public static readonly addVelocity = addVelocity;
@@ -32,6 +35,9 @@ class EntityActions {
     public static readonly exhaust = exhaust;
     public static readonly explode = explode;
     public static readonly extinguish = extinguish;
+    public static readonly feed = feed;
+    public static readonly gainAir = gainAir;
+    public static readonly give = give;
 }
 
 export default EntityActions;
